@@ -1,6 +1,6 @@
 
 			 <!-- Features Section Start -->
-			 <div class="features-section bg-color-primary">
+			 <div class="features-section bg-red">
             <div class="container">
                 <div class="row g-6">
 				@foreach($categories as $category)

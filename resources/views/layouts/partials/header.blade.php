@@ -7,10 +7,9 @@
 
                         <!-- Header Logo Start -->
                         <div class="header-logo">
-                            <a class="header-logo__logo" href="{{ url('/') }}"><img src="assets/images/dark-logo.png" width="296" height="64" alt="Logo"></a>
+                            <a class="header-logo__logo" href="{{ url('/') }}"><img src="{{ asset('assets/mama/images/logo.png')}}"  width="60px" alt="Logo"></a>
                         </div>
                         <!-- Header Logo End -->
-
 
                         <!-- Header Inner Start -->
                         <div class="header-inner">
@@ -19,7 +18,9 @@
                                 <nav class="menu-primary">
                                     <ul class="menu-primary__container">
 									    <li><a class="active" href="{{ url('/') }}"><span>Home</span></a>
-                                        <li><a href="become-an-instructor.html"><span>Register</span></a></li>
+                                        <li><a href="{{ url('records')}}">Resources</a></li>
+                                        <li><a href="{{ url('forums')}}">Forums</a></li>
+                                        <li><a href="{{ url('/register') }}"><span>Register</span></a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -31,7 +32,7 @@
                             <!-- Header User Button Start -->
                             <div class="header-user d-none d-lg-flex">
                                 <div class="header-user__button">
-                                    <button class="header-user__login" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
+                                    <a href="{{ url('/login') }}" class="header-user__login" >Log In</a>
                                 </div>
                                 <div class="header-user__button">
                                     <button class="header-user__signup btn btn-primary btn-hover-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Sign Up</button>

@@ -13,7 +13,6 @@
     @include('home.partials.themes')
     @include('home.partials.top_searches')
     @include('home.partials.top_authors')
-    @include('home.partials.subscription')
 
 @endsection
 

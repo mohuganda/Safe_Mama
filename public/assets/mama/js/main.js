@@ -17,9 +17,9 @@
                 // 'min-height' : 'calc(100vh - ' + headerHeight + 'px)',
                 'margin-top' : headerHeight + 'px'
             });
-            nextElem.css({
-                'margin-top' : headerHeight + 'px'
-            });
+            // nextElem.css({
+            //     'margin-top' : headerHeight + 'px'
+            // });
         }
     }
     bannerHeight();

@@ -12,7 +12,7 @@
                                 <div class="slider-caption">
                                     <h3 class="slider-caption__sub-title">Start to success</h3>
                                     <h2 class="slider-caption__main-title">Access To <mark>500+</mark> Publications from <mark>80</mark> Authors</h2>
-                                    <p>Take your learning organisation to the next level.</p>
+                                    <p>Take your learning to the next level.</p>
                                 </div>
                                 <!-- Slider Caption End -->
 
@@ -36,7 +36,7 @@
                             <!-- Slider Image Start -->
                             <div class="slider-image">
                                 <div class="slider-image__image text-center text-lg-end" data-aos="fade-up" data-aos-duration="1000">
-                                    <img src="assets/images/home-01-hero-image.png" alt="Hero Image" width="599" height="480">
+                                    <img src="{{ asset('assets/mama/images/home-01-hero-image.png')}}" alt="Hero Image" width="599" height="480">
                                 </div>
 
                                 <div class="slider-image-widget" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="1000">
@@ -62,10 +62,12 @@
                     </div>
                 </div>
 
-                <img class="slider-section__shape-01" data-depth="0.8" src="assets/images/shape/edumall-shape-grid-dots.png" alt="Shape" width="417" height="371">
+                <img class="slider-section__shape-01" data-depth="0.8" 
+                src="{{ asset('assets/mama/images/shape/edumall-shape-grid-dots.png') }}" alt="Shape" width="417" height="371">
                 <div class="slider-section__shape-02" data-depth="-1"></div>
                 <div class="slider-section__shape-03" data-depth="1.6"></div>
-                <img class="slider-section__shape-04" data-depth="-0.6" src="assets/images/shape/edumall-shape-01.png" alt="Shape" width="179" height="178">
+                <img class="slider-section__shape-04" data-depth="-0.6"
+                 src="{{ asset('assets/mama/images/shape/edumall-shape-01.png') }}" alt="Shape" width="179" height="178">
 
             </div>
         </div>

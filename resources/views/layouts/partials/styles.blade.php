@@ -34,9 +34,12 @@
     <link rel="stylesheet" href="{{ asset('assets/mama/css/plugins/flatpickr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/mama/css/plugins/ion.rangeSlider.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/mama/css/plugins/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/webfont-medical-icons/css/wfmi-style.css')}}">
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{ asset('assets/mama/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/sharing.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/cookie-alert.css')}}">
 
 </head>
 
@@ -54,7 +57,7 @@
                     <!-- Header Top Bar Wrapper Start -->
                     <div class="header-top-bar-wrap">
                         <div class="header-top-bar-wrap__text text-center">
-                            <p>Keep learning with free resources during <strong>COVID-19.</strong> <a href="#">Learn more</a></p>
+                            <p>Keep learning with free resources during <strong>Improve your skills</strong> <a href="#">Learn more</a></p>
                         </div>
                     </div>
                     <!-- Header Top Bar Wrapper End -->

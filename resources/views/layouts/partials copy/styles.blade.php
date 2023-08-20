@@ -31,6 +31,7 @@
  <link rel="stylesheet" href="{{ asset('assets/plugins/tour/tour.css')}}">
 
  <script src="{{ asset('frontend/js/jquery.min.js')}}"></script>
+ 
 
     <style>
          :root {

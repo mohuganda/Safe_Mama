@@ -11,7 +11,8 @@
 	@endphp
 
     <!-- ======================= Publication Info ======================== -->
-	<div class="bg-light rounded py-5" style="background-image: url({{ asset('frontend/img/dots.png')}}); background-repeat:repeat-x; background-size:contain;">
+	<div class="bg-light" 
+	style="background-image: url({{ asset('frontend/img/dots.png')}}); background-repeat:repeat-x; background-size:contain; margin-top:0px!important; padding-top:200px!important;">
 		<div class="container">
 
 		@include('layouts.partials.alerts')

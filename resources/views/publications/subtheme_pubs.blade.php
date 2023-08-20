@@ -15,7 +15,6 @@
 		 <h4>Sub thematic area: {{$subtheme->description}}</h4>
      	</div>
 
-		@include('partials.quiz.quiz')
 	    @include('publications.partials.publications')
        
 	</div>

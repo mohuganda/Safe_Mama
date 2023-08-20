@@ -76,6 +76,51 @@
 /*  02.01 - Template default CSS
 /*----------------------------------------*/
 /* Common Style */
+
+:root{
+  --color-red:  rgb(174, 5, 5);
+  --color-black:  #000000;
+  --color-yellow: #ffc221;
+}
+
+.bg-yellow{
+
+  background-color: var(--color-yellow)!important;
+
+}
+
+
+.bg-black{
+
+  background-color: var(--color-black)!important;
+  color:white!important;
+
+}
+
+.bg-red{
+
+  background-color: var(--color-red)!important;
+
+}
+
+.text-red{
+ color:  var(--color-red)!important;
+}
+
+.text-yellow{
+  color:  var(--color-yellow)!important;
+ }
+
+
+.theme i{
+  color:var(--color-yellow)!important;
+  font-size: 1.7rem;
+}
+
+.theme h3{
+  color:white!important;
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -1738,8 +1783,9 @@ span.flatpickr-weekday {
 }
 
 .header-top {
-  background-color: #031f42;
+ /* background-color: #031f42;*/
   padding: 5px 0;
+  background-color: #000000;
 }
 
 .header-top-02 {
