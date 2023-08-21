@@ -18,8 +18,8 @@
 
                                 <!-- Slider Search Start -->
                                 <div class="slider-search">
-                                    <form action="#">
-                                        <input class="slider-search__field" placeholder="What do you want to learn?">
+                                    <form action="{{ url('records/search') }}">
+                                        <input class="slider-search__field" name="term" value ="{{ @old('term') }}" placeholder="What do you want to learn?">
                                         <button type="submit" class="slider-search__submit">
                                             <i class="search-btn-icon fas fa-search"></i>
                                         </button>
