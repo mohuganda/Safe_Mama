@@ -41,11 +41,28 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/sharing.css')}}">
     <link rel="stylesheet" href="{{ asset('frontend/css/cookie-alert.css')}}">
 
+    <style>
+
+        .padded-top{
+            margin-top: 200px!important;
+        }
+
+        .bg-white{
+            background-color: white!important;
+        }
+
+        .bg-grey{
+            background-color: #EEEEEE!important;
+        }
+
+    </style>
+
+
 </head>
 
 <body>
 
-    <main class="main-wrapper">
+    <main class="main-wrapper bg-grey">
 
         <!-- Header start -->
         <div class="header-section header-sticky">

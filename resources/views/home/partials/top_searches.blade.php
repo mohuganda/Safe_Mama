@@ -1,6 +1,6 @@
 
 			<!-- Course Section Start -->
-			<div class="courses-section section-padding-02">
+			<div class="courses-section section-padding-02 bg-white py-2 mt-4 mb-2">
             <div class="container">
 
                 <div class="row">
@@ -14,7 +14,7 @@
                    
                 </div>
 
-                        <div class="row row-cols-xl-5 g-6">
+                        <div class="row row-cols-xl-5 g-6 justify-content-center">
                            
                             @php 
 								$i=0; 
@@ -56,20 +56,20 @@
 
                             </div>
                             @endforeach
-                          
                             
                         </div>
 
                 </div>
 
-            </div>
-        </div>
-        <!-- Course Section End -->
-
-        <div class="row justify-content-center">
-						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-							<div class="position-relative text-center">
-								<a href="{{ url('records')}}" class="btn btn-md theme-bg rounded text-light hover-theme">Explore More Resources<i class="lni lni-arrow-right-circle ml-2"></i></a>
-							</div>
-						</div>
+                <div class="row justify-content-center mt-5 mb-3">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="position-relative text-center">
+                        <a href="{{ url('records')}}" class="btn btn-md btn-dark">Explore More Resources<i class="lni lni-arrow-right-circle ml-2"></i></a>
+                    </div>
+                </div>
 		</div>
+
+            </div>
+    <!-- Course Section End -->
+
+       

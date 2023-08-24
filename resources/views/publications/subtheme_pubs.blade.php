@@ -8,7 +8,7 @@
 <div class="gray py-4">
 <div class="container">
 	
-	<div class="row">
+	<div class="row padded-top">
 
      <div class="col-lg-8">
      	<div class="row">

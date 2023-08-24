@@ -8,7 +8,7 @@
 
 <div class="py-3 gray">
 <div class="container">
-<div class="row align-items-center">
+<div class="row align-items-center padded-top">
 					
 @foreach ($themes as $theme)
 		<!-- Single -->

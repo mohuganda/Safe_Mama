@@ -11,7 +11,7 @@
 	@endphp
 
     <!-- ======================= Publication Info ======================== -->
-	<div class="bg-light" 
+	<div class="bg-light padded-top" 
 	style="background-image: url({{ asset('frontend/img/dots.png')}}); background-repeat:repeat-x; background-size:contain; margin-top:0px!important; padding-top:200px!important;">
 		<div class="container">
 

@@ -7,7 +7,7 @@
 @section('content')
 <div class="gray pt-2">
     <div class="container">
-        <div class="row">
+        <div class="row padded-top">
 
 
             <!-- Item Wrap Start -->

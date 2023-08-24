@@ -8,7 +8,7 @@
 
 <div class="py-3 gray">
 <div class="container text-center">
-
+<div class="padded-top">
 @if(count($subthemes)>0)
 <h3 class="py-3">Thematic Area: {{ $subthemes[0]->theme->description}}</h3>
 <div class="row justify-content-center">
@@ -36,6 +36,7 @@
 </div>
 
 @endif
+</div>
 </div>
 </div>
 

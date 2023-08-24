@@ -10,7 +10,7 @@
 			
 <div class="container">
            
-<div class="row">
+<div class="row padded-top">
 
 <!-- Blog Detail -->
 <div class="col-lg-8 col-md-12 col-sm-12 col-12">

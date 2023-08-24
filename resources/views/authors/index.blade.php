@@ -8,7 +8,7 @@
 
 <div class="py-3 gray">
 <div class="container">
-<div class="row justify-content-center py-3">
+<div class="row justify-content-center py-3 padded-top">
 	<h3>Resource Contributing Sources</h3>
 </div>
 <div class="row align-items-center">

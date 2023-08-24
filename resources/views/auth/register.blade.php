@@ -17,12 +17,10 @@
 
 @section('content')
 
-<section class="middle gray">
-				<div class="container">
-					<div class="row align-items-center justify-content-center">
+<div class="row container align-items-center justify-content-center py-1 ">
 					
-						
-						<div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 mfliud">
+					<div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 padded-top mb-3">
+					   
 							<form class="border p-3 rounded bg-white"  method="POST" action="{{ route('registration') }}">
                                <h3 class="py-3 text-success">Register for an account</h3>
 							   
@@ -148,8 +146,6 @@
 						</div>
 						
 					</div>
-				</div>
-			</section>
 
 
 @endsection

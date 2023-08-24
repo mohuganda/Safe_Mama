@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-<div class="row px-3">
+<div class="row px-3 padded-top">
 
 	<div class="card col-lg-12">
 		<div class="card-header text-left">

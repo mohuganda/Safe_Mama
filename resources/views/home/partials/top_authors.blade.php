@@ -1,7 +1,7 @@
 
             	
 			<!-- ======================= Authors ======================== -->
-			<section class="space gray">
+			<section class="space gray mt-3">
 				<div class="container">
 				
 					<div class="row justify-content-center" data-aos="slide-down">
@@ -38,7 +38,7 @@
 					</div>
 					<!-- /row -->
 					
-					<div class="row justify-content-center">
+					<div class="row justify-content-center mt-5 mb-3">
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 							<div class="position-relative text-center">
 								<a href="{{ url('authors')}}" class="btn btn-md bg-dark rounded text-light hover-theme">Browse All Sources<i class="lni lni-arrow-right-circle ml-2"></i></a>

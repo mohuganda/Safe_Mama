@@ -6,29 +6,24 @@
 
 @section('content')
 
-<div class="gray py-4">
-<div class="container">
+<div class="row container bg-grey">
+
+	<div class="col-lg-12 padded-top">
 	<div class="row">
+		<h4 class="ml-3">Search Results</h4>
+	</div>
 
-     <div class="col-lg-8">
-     	<div class="row">
-     		<h4 class="ml-3">Search Results</h4>
-     	</div>
+		<div class="row text-success ml-2 mb-2">
+			{{ (isset($_GET['tag']))?" Tag: ".$_GET['tag']:"" }}
+			<br>
+			@include('home.partials.tags')
+	</div> 
 
-		 <div class="row text-success ml-2 mb-2">
-			  {{ (isset($_GET['tag']))?" Tag: ".$_GET['tag']:"" }}
-		</div> 
+		@include('publications.partials.publications')
 
-	     @include('publications.partials.publications')
+	</div>
 
-	  </div>
 
-	<div class="col-lg-4">
-	@include('home.partials.tags')
-    @include('publications.partials.facts')
-	<br/>
-    </div>
-</div>
 </div>
 
 @endsection
