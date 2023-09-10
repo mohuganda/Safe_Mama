@@ -8,18 +8,20 @@ use App\Repositories\AuthorsRepository;
 use App\Repositories\PublicationsRepository;
 use App\Repositories\QuotesRepository;
 use App\Http\Controllers\Controller;
+use App\Repositories\ThemesRepository;
 
 class PublicationsApiController extends Controller
 {
 
-    private $publicationsRepo,$authorsRepo,$quotesRepo;
+    private $publicationsRepo,$authorsRepo,$quotesRepo,$themesRepo;
 
     public function __construct(PublicationsRepository $publicationsRepo, 
-    AuthorsRepository $authorsRepo, QuotesRepository $quotesRepo){
+    AuthorsRepository $authorsRepo, QuotesRepository $quotesRepo, ThemesRepository $themesRepo){
 
         $this->publicationsRepo = $publicationsRepo;
         $this->authorsRepo      = $authorsRepo;
         $this->quotesRepo       = $quotesRepo;
+        $this->themesRepo      = $themesRepo;
     }
    
 
@@ -55,6 +57,33 @@ class PublicationsApiController extends Controller
         ];
     }
 
+
+    
+    /**
+        * @OA\Get(
+        * path="/knowhub/api/publications/categories",
+        * operationId="List Publications Categories",
+        * tags={"List Categories"},
+        * summary="List Categories",
+        * description="Returns a list of all publication categories",
+        *      @OA\Response(
+        *          response=200,
+        *          description="Successful",
+        *          @OA\JsonContent()
+        *       )
+        * )
+        */
+
+    public function categories(Request $request)
+    {
+        $categories = $this->themesRepo->get($request, true);
+        return [
+            "status" => 200,
+            "data"   => $categories
+        ];
+    }
+
+    
    
     /**
     * @OA\Post(
@@ -173,6 +202,16 @@ class PublicationsApiController extends Controller
         *       )
         * )
         */
+
+    public function category_publications($category_id)
+    {
+        $publications = $this->publicationsRepo->get_theme_publications($category_id);
+        
+        return [
+            "status" => 200,
+            "data" =>$publications
+        ];
+    }
     public function show($publication_id)
     {
         $publication = $this->publicationsRepo->find($publication_id);

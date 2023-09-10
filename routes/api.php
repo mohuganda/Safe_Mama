@@ -18,7 +18,10 @@ use App\Http\Controllers\Api\PublicationsApiController;
 
 Route::group(["prefix" =>"publications"],function(){
 
+   
     Route::resource('/', PublicationsApiController::class);
+    Route::get('/categories', [PublicationsApiController::class,'categories']);
+    Route::get('/categories/{id}', [PublicationsApiController::class,'category_publications']);
     Route::get('/{id}', [PublicationsApiController::class,"show"]);
     Route::get('/filetypes', [PublicationsApiController::class,"file_types"]);
 

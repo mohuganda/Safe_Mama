@@ -7,7 +7,7 @@
 
 					<div class="row container align-items-center justify-content-center py-1 ">
 					
-						<div class="col-xl-6 col-lg-6 card col-md-12 col-sm-12 padded-top mb-3">
+						<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 padded-top mb-3">
                             
 							<form class="border p-3 rounded  bg-white"  action="{{ route('login') }}" method="POST"> 		
                                @csrf

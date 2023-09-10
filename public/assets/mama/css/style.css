@@ -81,11 +81,18 @@
   --color-red:  rgb(174, 5, 5);
   --color-black:  #000000;
   --color-yellow: #ffc221;
+  --color-orange: #d3a013;
 }
 
 .bg-yellow{
 
   background-color: var(--color-yellow)!important;
+
+}
+
+.bg-orange{
+
+  background-color: var(--color-orange)!important;
 
 }
 

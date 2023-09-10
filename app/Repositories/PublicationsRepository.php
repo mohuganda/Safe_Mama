@@ -238,6 +238,18 @@ class PublicationsRepository extends SharedRepo{
         return $pub;
     }
 
+    public function get_theme_publications($id){
+
+        $pub = Publication::with([
+            'file_type',
+            'attachments',
+            'author','sub_theme',
+            'comments','parent',
+            'summaries','versioning'])->where('sub_thematic_area_id',$id)->get();
+
+        return $pub;
+    }
+
     public function find($id){
 
         $pub = Publication::with([

@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 
 class ThemesRepository{
 
-    public function get(Request $request){
+    public function get(Request $request,$get_all=false){
+
+        if($get_all)
+         return ThemeticArea::all();
 
         $rows_count = ($request->rows)?$request->rows:24;
 
