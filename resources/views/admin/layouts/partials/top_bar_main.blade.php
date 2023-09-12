@@ -4,12 +4,12 @@
 		<div class="main-header-left ">
 			<a class="animated-arrow hor-toggle horizontal-navtoggle"><span></span></a><!-- filter: brightness(0) invert(1);"sidebar-toggle-->
 			<a class="header-brand" href="{{ url('/') }}">
-				<img src="{{ asset('assets/mama/images/logo.png') }}" id="change-image" style="" width=70>
+				<img src="{{ asset('assets/mama/images/logo.png') }}" id="change-image"  width=50>
 			</a>
 		</div>
 		<div class="main-header-center">
 			<div class="responsive-logo">
-				<img src="{{ asset('assets/mama/images/logo.png') }}" id="change-image" style="" width=70px>
+				<img src="{{ asset('assets/mama/images/logo.png') }}" id="change-image"  width=50px>
 			</div>
 		</div>
 		<div class="main-header-right">
