@@ -10,7 +10,7 @@
 
                                 <!-- Slider Caption Start -->
                                 <div class="slider-caption">
-                                    <h3 class="slider-caption__sub-title">Empowerment of Front Line Health Workers with Advanced Knowledge and skills in Reproductive, Maternal and Child Health Care </h3>
+                                    <h2 class="slider-caption__main-title">Empowerment of Front Line Health Workers with Advanced Knowledge and skills in Reproductive, Maternal and Child Health Care </h2>
                                     {{-- <h2 class="slider-caption__main-title">Access To <mark>500+</mark> Publications from <mark>80</mark> Authors</h2> --}}
                                     <p>Take your learning to the next level.</p>
                                 </div>
