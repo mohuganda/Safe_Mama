@@ -8,10 +8,10 @@
 					</li>
 				@endcan
 
-				@can('view_rcc_dashboard')
-					
+				{{-- @can('view_rcc_dashboard')
+
 				<li aria-haspopup="true"><a href="{{ url('admin/rccdashboards') }}" class="sub-icon"><i class=""></i>RCC Dashboard<i class="fe fe-chevron-down horizontal-icon"></i></a>
-				@endcan
+				@endcan --}}
 
 				</li>
 
@@ -23,13 +23,13 @@
 						<li aria-haspopup="true"><a href="{{ url('admin/publications') }}" class="slide-item">Manage PH Resources</a></li>
 						<li aria-haspopup="true"><a href="{{ url('admin/publications/moderate') }}" class="slide-item">Resource Comments</a></li>
 						<!-- <li><h3 class="fs-14 mb-1" style="color:#000 !important;">DATA CATEGORIES</h3></li> -->
-						
-						@can('manage_experts')
-						<li aria-haspopup="true"><a href="{{ url('admin/experts') }}">Roster of Experts</a></li>
-						@endcan
-						<li aria-haspopup="true"><a href="{{ url('admin/datarecords/create') }}" class="slide-item">Other Data Categories</a></li>
 
-						<li aria-haspopup="true"><a href="{{ url('admin/datarecords') }}" class="slide-item">Manage Categories Data</a></li>
+						{{-- @can('manage_experts')
+						<li aria-haspopup="true"><a href="{{ url('admin/experts') }}">Roster of Experts</a></li>
+						@endcan --}}
+						{{-- <li aria-haspopup="true"><a href="{{ url('admin/datarecords/create') }}" class="slide-item">Other Data Categories</a></li>
+
+						<li aria-haspopup="true"><a href="{{ url('admin/datarecords') }}" class="slide-item">Manage Categories Data</a></li> --}}
 						@can('manage_facts')
 						<li aria-haspopup="true"><a href="{{ url('admin/facts') }}">Facts</a></li>
 						@endcan
@@ -40,7 +40,7 @@
 					@can('view_quotes')
 						 	<li aria-haspopu="true"><a href="{{ url('admin/quotes') }}">Quotes</a></li>
 					@endcan
-		
+
 					@can('view_quize')
 							<li aria-haspopup="true"><a href="{{ url('admin/quiz') }}">Quiz</a></li>
 					@endcan
@@ -66,17 +66,17 @@
 					</ul>
 				</li>
 				@endcan
-				
+
 				<li aria-haspopup="true"><a href="#" class="sub-icon"><i class=""></i>Dropdown Lists<i class="fe fe-chevron-down horizontal-icon"></i></a>
 					<ul class="sub-menu">
 						@can('view_file_types')
 						<li aria-haspopup="true"><a href="{{ url('admin/filetypes') }}">Resource and Asset Types</a></li>
 						@endcan
-						
+
 						@can('view_sources')
 						<li aria-haspopup="true"><a href=" {{ url('admin/authors') }}">Data Sources</a></li>
 						<li aria-haspopup="true"><a href="{{ url('admin/datarecords/categories') }}">Categories</a></li>
-					
+
 						@endcan
 
 						@can('view_themes')
@@ -90,7 +90,7 @@
 						<li aria-haspopup="true"><a href=" {{ url('admin/areas') }}">Geographical Coverage</a></li>
 						@endcan
 
-						
+
 
 						<!-- Privacy Policy -->
 						@can('view_asset_types')
@@ -106,8 +106,8 @@
 
 						@endcan
 
-						
-						
+
+
 						@can('view_privacy_policy')
 						<li aria-haspopup="true"><a href="{{ url('admin/privacy') }}">Privacy Policy</a></li>
 						@endcan
@@ -122,7 +122,7 @@
 						<li class=""><a href="{{ url('permissions') }}" class="">Permissions</a></li>
 						<li class=""><a href="{{ url('auth/logs') }}" class="">User Logs</a></li>
 						<li class=""><a href="{{ url('constants') }}" class="">Constants</a></li>
-						
+
 						@can('view_mailing_list')
 						<li class=""><a href="{{ url('mailing_list') }}" class="">Mailing List</a></li>
 						@endcan
