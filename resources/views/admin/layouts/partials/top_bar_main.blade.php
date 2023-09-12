@@ -4,12 +4,12 @@
 		<div class="main-header-left ">
 			<a class="animated-arrow hor-toggle horizontal-navtoggle"><span></span></a><!-- sidebar-toggle-->
 			<a class="header-brand" href="{{ url('/') }}">
-				<img src="{{ asset('assets/images/logo.png') }}" id="change-image" style="filter: brightness(0) invert(1);" width=200>
+				<img src="{{ asset('assets/mama/images/logo.png') }}" id="change-image" style="filter: brightness(0) invert(1);" width=200>
 			</a>
 		</div>
 		<div class="main-header-center">
 			<div class="responsive-logo">
-				<img src="{{ asset('assets/images/logo.png') }}" id="change-image" style="filter: brightness(0) invert(1);" width=200px>
+				<img src="{{ asset('assets/mama/images/logo.png') }}" id="change-image" style="filter: brightness(0) invert(1);" width=200px>
 			</div>
 		</div>
 		<div class="main-header-right">
@@ -36,7 +36,7 @@
 				<div class="dropdown-menu animated fadeInUp">
 					<div class="menu-header-content text-left d-flex">
 						<div class="">
-							
+
 							<!-- If comment_count > 0 -->
 							@if($pending_forum_comments_count > 0)
 								<h6 class="menu-header-title mb-0">You have {{ $pending_forum_comments_count }} forum comments requiring approval</h6>
@@ -80,7 +80,7 @@
 				<div class="dropdown-menu animated fadeInUp">
 					<div class="menu-header-content text-left d-flex">
 						<div class="">
-							
+
 							@if($pending_publication_comments_count > 0)
 								<h6 class="menu-header-title mb-0">You have {{ $pending_publication_comments_count }} publication comment requiring approval</h6>
 							@else
@@ -110,7 +110,7 @@
 					</div>
 				</div>
 			</div><!-- Main-header-message closed -->
-			
+
 			<!-- Main-header-message closed -->
 			<div class="dropdown main-profile-menu nav nav-item nav-link">
 				<a  class=""><img class="rounded-circle" src="{{ asset('assets/images/user.jpg') }}" style="width:35px;"></a>
