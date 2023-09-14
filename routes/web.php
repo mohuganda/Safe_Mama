@@ -39,6 +39,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\CountriesController;
+use App\Http\Controllers\WebinarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -102,6 +103,11 @@ Route::group(["prefix" => "authors"], function () {
     Route::get("/", [AuthorsController::class, 'index']);
     Route::get("publications", [PublicationsController::class, 'author_pubs']);
 
+});
+
+Route::group(["prefix" => "webinars"], function () {
+
+    Route::get("/", [WebinarController::class, 'index']);
 });
 
 Route::group(["prefix" => "healthassets"], function () {

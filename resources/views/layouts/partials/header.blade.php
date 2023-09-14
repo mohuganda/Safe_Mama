@@ -20,7 +20,7 @@
 									    <li><a class="active" href="{{ url('/') }}"><span>Home</span></a>
                                         <li><a href="{{ url('records')}}">Resources</a></li>
                                         <li><a href="{{ url('forums')}}">Forums</a></li>
-                                        <li><a href="{{ url('/register') }}"><span>Register</span></a></li>
+                                        <li><a href=""><span>Trainings</span></a></li>
                                     </ul>
                                 </nav>
                             </div>

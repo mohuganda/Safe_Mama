@@ -14,7 +14,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <!-- categories Item Start -->
                         <div class="categories-item " data-aos="fade-up" data-aos-duration="1000">
-                            <a class="categories-item__link theme bg-black" href="{{ url('records/subtheme')}}?subtheme={{$row->id}}">
+                            <a class="categories-item__link theme bg-black" href="{{ url('records')}}?category={{$row->id}}">
                                 <div class="categories-item__icon">
 								<i class="fa {{$row->icon}}"></i> 
                                 </div>

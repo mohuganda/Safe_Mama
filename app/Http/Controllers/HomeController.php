@@ -53,23 +53,23 @@ class HomeController extends Controller
 
 		return array(
 			[
-				"title"=>"Health Security",
+				"title"=>"Webinars",
 				"icon"=>"fa fa-heart",
-				'link'=>"browse/themes",
+				'link'=>"webinars/",
 				"image"=>"health.png",
 				"stats"=> $this->themesRepo->count()
 			],
 			[
-				"title"=>"Contibuting Sources",
+				"title"=>"Guidelines",
 				"icon"=>"fa fa-business-time",
-				'link'=>"browse/authors",
+				'link'=>"records?type=3",
 				"image"=>"resource.png",
 				"stats"=> $this->authorsRepo->count()
 			],
 			[
-				"title"=>"Wide Coverage",
+				"title"=>"Policies",
 				"icon"=>"fa fa-map-pin",
-				'link'=>"browse/areas",
+				'link'=>"records?type=3",
 				"image"=>"map.png",
 				"stats"=>$this->areasRepo->count()
 			],
