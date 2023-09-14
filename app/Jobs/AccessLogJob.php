@@ -64,11 +64,7 @@ class AccessLogJob implements ShouldQueue
         $locationLog->city    = $data->City;
         $locationLog->lat     = $data->Latitude;
         $locationLog->long    = $data->Longitude;
-<<<<<<< HEAD
         $locationLog->publication_id = ($this->request)?@$this->request['id']:null;
-=======
-        @$locationLog->publication_id = ($this->request)?$this->request['id']:null;
->>>>>>> 4562813f15d596fe432fa9f6eb2896f3897635e6
         $locationLog->user_id = (current_user())?current_user()->id:null;
         $locationLog->save();
 
