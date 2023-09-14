@@ -7,14 +7,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="{{ @settings()->site_description }}" />
 	<meta name="robots" content="noindex">
-	<meta name="author" content="Africa CDC" />
+	<meta name="author" content="Ministry of Health" />
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 	<!-- Title -->
 	<title>{{ @$title ?? 'Africa CDC Knowledge Hub' }}</title>
 
 	<!-- Favicon -->
-	<link rel="icon" href="{{ asset('assets/images/fav.png')}}" type="image/x-icon" />
+	<link rel="icon" href="{{ asset('assets/mama/images/logo.png')}}" type="image/x-icon" />
 
 	<!-- Icons css -->
 	<link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
@@ -73,7 +73,7 @@
 		function hideLoader(){
 			$.unblockUI();
 		}
-		
+
 	</script>
 
 	<style>

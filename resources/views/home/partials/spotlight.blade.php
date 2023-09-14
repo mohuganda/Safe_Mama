@@ -10,7 +10,7 @@
 
                                 <!-- Slider Caption Start -->
                                 <div class="slider-caption">
-                                    <h3 class="slider-caption__sub-title">Start Exploring</h3>
+                                    <h3 class="slider-caption__sub-title">Empowerment of Front Line Health Workers with Advanced Knowledge and skills in Reproductive, Maternal and Child Health Care</h3>
                                     <h2 class="slider-caption__main-title">Access To <mark>500+</mark> Resources from <mark>80</mark> Sources</h2>
                                     <p>Boosting Maternal Health Knowledge & skills.</p>
                                 </div>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
 
-                <img class="slider-section__shape-01" data-depth="0.8" 
+                <img class="slider-section__shape-01" data-depth="0.8"
                 src="{{ asset('assets/mama/images/shape/edumall-shape-grid-dots.png') }}" alt="Shape" width="417" height="371">
                 <div class="slider-section__shape-02" data-depth="-1"></div>
                 <div class="slider-section__shape-03" data-depth="1.6"></div>

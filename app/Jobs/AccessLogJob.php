@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Log;
 class AccessLogJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    
+
     private $ip_address,$request;
 
     /**
@@ -42,20 +42,20 @@ class AccessLogJob implements ShouldQueue
 
         $visitorInfo = [
         'Country Code'=>$user_ip_address_info->geoplugin_countryCode
-        ,'CountryName'=>$user_ip_address_info->geoplugin_countryName 
-        ,'City'=>$user_ip_address_info->geoplugin_city 
-        ,'Region'=>$user_ip_address_info->geoplugin_region 
-        ,'Latitude'=>$user_ip_address_info->geoplugin_latitude 
-        ,'Longitude'=>$user_ip_address_info->geoplugin_longitude 
-        ,'Time_zone'=>$user_ip_address_info->geoplugin_timezone  
-        ,'ContinentCode'=>$user_ip_address_info->geoplugin_continentCode 
-        ,'ContinentName'=>$user_ip_address_info->geoplugin_continentName 
+        ,'CountryName'=>$user_ip_address_info->geoplugin_countryName
+        ,'City'=>$user_ip_address_info->geoplugin_city
+        ,'Region'=>$user_ip_address_info->geoplugin_region
+        ,'Latitude'=>$user_ip_address_info->geoplugin_latitude
+        ,'Longitude'=>$user_ip_address_info->geoplugin_longitude
+        ,'Time_zone'=>$user_ip_address_info->geoplugin_timezone
+        ,'ContinentCode'=>$user_ip_address_info->geoplugin_continentCode
+        ,'ContinentName'=>$user_ip_address_info->geoplugin_continentName
         ,'CurrencyCode'=>$user_ip_address_info->geoplugin_currencyCode
         ];
 
 
         if($visitorInfo && @$user_ip_address_info->geoplugin_status==200):
-        
+
         $data = (Object) $visitorInfo;
 
         $locationLog = new AccessLog();
@@ -64,7 +64,11 @@ class AccessLogJob implements ShouldQueue
         $locationLog->city    = $data->City;
         $locationLog->lat     = $data->Latitude;
         $locationLog->long    = $data->Longitude;
+<<<<<<< HEAD
         $locationLog->publication_id = ($this->request)?@$this->request['id']:null;
+=======
+        @$locationLog->publication_id = ($this->request)?$this->request['id']:null;
+>>>>>>> 4562813f15d596fe432fa9f6eb2896f3897635e6
         $locationLog->user_id = (current_user())?current_user()->id:null;
         $locationLog->save();
 
