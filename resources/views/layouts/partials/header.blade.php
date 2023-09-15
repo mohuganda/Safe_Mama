@@ -21,8 +21,17 @@
                                         <li><a href="{{ url('records')}}">Resources</a></li>
                                         <li><a href="{{ url('forums')}}">Forums</a></li>
                                         <li><a href="{{ url('webinars')}}">Webinars</a></li>
-                                        <li><a href="https://hris2.health.go.ug/national_train/login"><span>Trainings</span></a></li>
-                                        <li><a href="{{ url('forums')}}"><span>Incident Reporting</span></a></li>
+                                        <li class="menu-item-has-children">
+                                            <a href="#"><span>Courses & Trainings</span></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="https://elearning.health.go.ug/course/index.php?categoryid=3" target="_blank"><span>Training Courses</span></a></li>
+                                                <li><a href="https://hris2.health.go.ug/national_train/login" target="_blank"><span>IHRIS In-service Training</span></a></li>
+                                           
+                                            </ul>
+                                        </li>
+                                       
+                                        <li><a href="{{ url('incidents')}}"><span>MCH Incident Reporting</span></a></li>
+                                        <li><a href="{{ url('incidents')}}"><span>News</span></a></li>
                                     </ul>
                                 </nav>
                             </div>
