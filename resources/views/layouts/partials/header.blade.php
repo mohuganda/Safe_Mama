@@ -20,7 +20,9 @@
 									    <li><a class="active" href="{{ url('/') }}"><span>Home</span></a>
                                         <li><a href="{{ url('records')}}">Resources</a></li>
                                         <li><a href="{{ url('forums')}}">Forums</a></li>
-                                        <li><a href=""><span>Trainings</span></a></li>
+                                        <li><a href="{{ url('webinars')}}">Webinars</a></li>
+                                        <li><a href="https://hris2.health.go.ug/national_train/login"><span>Trainings</span></a></li>
+                                        <li><a href="{{ url('forums')}}"><span>Incident Reporting</span></a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -35,8 +37,9 @@
                                     <a href="{{ url('/login') }}" class="header-user__login" >Log In</a>
                                 </div>
                                 <div class="header-user__button">
-                                    <button class="header-user__signup btn btn-primary btn-hover-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Sign Up</button>
+                                    <a href="{{ url('/register') }}" class="header-user__login" >Register</a>
                                 </div>
+                               
                             </div>
                             <!-- Header User Button End -->
 

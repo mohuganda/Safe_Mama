@@ -82,6 +82,7 @@
   --color-black:  #000000;
   --color-yellow: #ffc221;
   --color-orange: #d3a013;
+  --color-yellow-shade: #8c690d;
 }
 
 .bg-yellow{
@@ -99,7 +100,7 @@
 
 .bg-black{
 
-  background-color: var(--color-black)!important;
+  background-color: var(--color-yellow-shade)!important;
   color:white!important;
 
 }
@@ -137,7 +138,7 @@ html, body {
 }
 
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family:"Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.75;
