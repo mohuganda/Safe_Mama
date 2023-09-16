@@ -31,7 +31,7 @@
                                         </li>
 
                                         <li><a href="{{ url('incidents')}}"><span>MCH Incident Reporting</span></a></li>
-                                        <li><a href="{{ url('incidents')}}"><span>News</span></a></li>
+                                        {{-- <li><a href="{{ url('incidents')}}"><span>News</span></a></li> --}}
                                     </ul>
                                 </nav>
                             </div>
