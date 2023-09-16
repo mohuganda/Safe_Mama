@@ -41,15 +41,17 @@
                             <!-- Header Mini Cart End -->
 
                             <!-- Header User Button Start -->
-                            <div class="header-user d-none d-lg-flex">
-                                <div class="header-user__button">
-                                    <a href="{{ url('/login') }}" class="header-user__login" >Log In</a>
+                            
+                            @guest
+                                <div class="header-user d-none d-lg-flex">
+                                    <div class="header-user__button">
+                                        <a href="{{ url('/login') }}" class="header-user__login" >Log In</a>
+                                    </div>
+                                    <div class="header-user__button">
+                                        <a href="{{ url('/register') }}" class="header-user__login" >Register</a>
+                                    </div>
                                 </div>
-                                <div class="header-user__button">
-                                    <a href="{{ url('/register') }}" class="header-user__login" >Register</a>
-                                </div>
-                               
-                            </div>
+                            @endguest
                             <!-- Header User Button End -->
 
                             <!-- Header Mobile Toggle Start -->

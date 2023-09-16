@@ -134,6 +134,10 @@
 <!-- Activation JS -->
 <script src=" {{ asset('assets/mama/js/main.js') }}"></script>
 
+
+@yield('scripts')
+
+
 </body>
 
 </html>

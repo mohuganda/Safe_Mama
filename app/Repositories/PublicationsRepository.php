@@ -8,6 +8,7 @@ use App\Models\Favourite;
 use App\Models\GeoCoverage;
 use App\Models\Publication;
 use App\Models\PublicationAttachment;
+use App\Models\PublicationCategory;
 use App\Models\PublicationComment;
 use App\Models\PublicationSummary;
 use App\Models\PublicationTag;
@@ -38,8 +39,9 @@ class PublicationsRepository extends SharedRepo{
          //search by keyword
         if($request->term){
             
-            $pubs->where('title','like',$request->term.'%');
+            $pubs->where('title','like','%'.$request->term.'%');
             $pubs->orWhere('publication','like',$request->term.'%');
+            $pubs->orWhere('description','like','%'.$request->term.'%');
             
             $authors     = Author::where('name','like',$request->term.'%')->get()->pluck('id');
             $tags        = Tag::where('tag_text','like',$request->term.'%')->get()->pluck('id');
@@ -65,6 +67,14 @@ class PublicationsRepository extends SharedRepo{
          if($request->area)
          $pubs->where('geographical_coverage_id',$request->area);
 
+         //type
+         if($request->type)
+         $pubs->where('file_type_id',$request->type);
+
+          //type
+          if($request->category)
+          $pubs->where('publication_catgory_id',$request->category);
+
          //search by tag
          if($request->tag){
 
@@ -86,9 +96,11 @@ class PublicationsRepository extends SharedRepo{
         $pubs->where('geographical_coverage_id',$request->country_id);
 
          //search by theme
-        if($request->thematic_area_id){
+        if($request->thematic_area_id || $request->theme ){
 
-            $subthems = SubThemeticArea::where('thematic_area_id',$request->thematic_area_id)->get()->pluck('id');
+            $category = ($request->thematic_area_id)?$request->thematic_area_id:$request->theme;
+
+            $subthems = SubThemeticArea::where('thematic_area_id',$category)->get()->pluck('id');
             $pubs->whereIn('sub_thematic_area_id',$subthems);
 
         }
@@ -295,6 +307,10 @@ class PublicationsRepository extends SharedRepo{
 
     public function get_types(){
         return PublicationType::all();
+    }
+
+    public function get_categories(){
+        return PublicationCategory::all();
     }
 
     public function get_themes(){

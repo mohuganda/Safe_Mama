@@ -6,17 +6,19 @@ use Illuminate\Http\Request;
 use App\Repositories\AuthorsRepository;
 use App\Repositories\PublicationsRepository;
 use App\Repositories\QuotesRepository;
+use App\Repositories\ThemesRepository;
 
 class PublicationsController extends Controller
 {
-    private $publicationsRepo,$authorsRepo,$quotesRepo;
+    private $publicationsRepo,$authorsRepo,$quotesRepo,$themesRepo;
 
     public function __construct(PublicationsRepository $publicationsRepo, 
-    AuthorsRepository $authorsRepo, QuotesRepository $quotesRepo)
+    AuthorsRepository $authorsRepo, QuotesRepository $quotesRepo,ThemesRepository $themesRepository)
     {
         $this->publicationsRepo = $publicationsRepo;
         $this->authorsRepo      = $authorsRepo;
         $this->quotesRepo       = $quotesRepo;
+        $this->themesRepo       = $themesRepository;
     }
 
     public function show(Request $request){
@@ -44,6 +46,9 @@ class PublicationsController extends Controller
     public function search(Request $request){
 
         $data['publications'] = $this->publicationsRepo->get($request);
+        $data['themes']       = $this->themesRepo->get($request,true);
+        $data['types']        = $this->publicationsRepo->get_types();
+        $data['categories']   = $this->publicationsRepo->get_categories();
         $data['search']       = (Object) $request->all();
 
         return view('publications.search',$data);

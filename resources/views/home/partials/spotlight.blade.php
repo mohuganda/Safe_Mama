@@ -37,16 +37,16 @@
                      <div class="d-flex flex-column">
                        
                              <div class="col-lg-12 d-flex slider-image-widget__caption mt-0 ml-1 mr-1">
-                                 <h4 class="slider-image-widget__title text-center fw-bold text-info"><a href="{{ url('records')}}?type=1">Guidelines</a></h4>
+                                 <h4 class="slider-image-widget__title text-center fw-bold text-info"><a href="{{ url('records')}}?category=1"><i class="fa fa-list 2x"></i> Guidelines</a></h4>
                              </div>
                        
                              <div class="col-lg-12 d-flex slider-image-widget__caption mt-4 ml-1 mr-1">
-                                 <h4 class="slider-image-widget__title text-center fw-bold text-warning"><a href="{{ url('records')}}?type=1">Policies</a></h4>
+                                 <h4 class="slider-image-widget__title text-center fw-bold text-warning"><a href="{{ url('records')}}?category=10"><i class="fa fa-balance-scale 2x"></i>  Policies</a></h4>
                              </div>
                       
                     
                              <div class="col-lg-12 d-flex slider-image-widget__caption mt-4 ml-1 mr-1">
-                                 <h4 class="slider-image-widget__title text-center fw-bold text-success"><a href="{{ url('records')}}?type=1">SOPs</a></h4>
+                                 <h4 class="slider-image-widget__title text-center fw-bold text-success"><a href="{{ url('records')}}?category=3"><i class="fa fa-gavel 2x"></i> SOPs</a></h4>
                              </div>
                         
                      </div>

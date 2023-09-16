@@ -3,7 +3,7 @@
     <span class="text-success">Tags:</span>
 
     @php 
-     $colors = ['dark','blue','green'];
+     $colors = ['dark','info','warning'];
     @endphp
 
     @foreach($tags as $tag)

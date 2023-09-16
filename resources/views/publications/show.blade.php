@@ -13,7 +13,7 @@
     <!-- ======================= Publication Info ======================== -->
 	<div class="bg-light padded-top" 
 	style="background-image: url({{ asset('frontend/img/dots.png')}}); background-repeat:repeat-x; background-size:contain; margin-top:0px!important; padding-top:200px!important;">
-		<div class="container">
+		<div class="container" >
 
 		@include('layouts.partials.alerts')
 		
@@ -68,7 +68,7 @@
 	<!-- ======================= Publication Info ======================== -->
 
 	<!-- ============================ Publication Details Start ================================== -->
-	<section class="py-5">
+	<section class="py-5 px-5">
 		<div class="container">
 			<div class="row">
 
@@ -88,11 +88,11 @@
 								<img src="{{ $image_link }}" class="rounded" width="500px"/>
 								@endif
 								<br>
-								<h5 class="ft-medium fs-md">Description</h5>
+								<h5 class="ft-medium fs-md mt-3">Description</h5>
 								<p>{!! $publication->description !!}</p>
 							</div>
 
-							<div class="jbd-details mb-4">
+							<div class="card jbd-details mb-4 py-3 px-2">
 								<h5 class="ft-medium fs-md text-success">Resource Details</h5>
 								<div class="other-details">
 									<div class="details ft-medium">
@@ -114,10 +114,6 @@
 									<div class="details ft-medium">
 										<label class="text-muted">Theme</label>
 										<span class="text-dark">{!! $publication->theme->description !!}</span>
-									</div>
-									<div class="details ft-medium">
-										<label class="text-muted">Sub-Theme</label>
-										<span class="text-dark">{!! nl2br($publication->sub_theme->description) !!}</span>
 									</div>
 									@auth()
 									<div class="details ft-medium">

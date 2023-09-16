@@ -2,7 +2,7 @@
    <div class="offcanvas offcanvas-end offcanvas-mobile" id="offcanvasMobileMenu" style="background-image: url(assets/images/mobile-bg.jpg);">
             <div class="offcanvas-header bg-white">
                 <div class="offcanvas-logo">
-                    <a class="offcanvas-logo__logo" href="#"><img src="assets/images/dark-logo.png" alt="Logo"></a>
+                    <a class="offcanvas-logo__logo" href="#"><img src="{{ asset('assets/mama/images/logo.png')}}" width="60px" alt="Logo"></a>
                 </div>
                 <button type="button" class="offcanvas-close" data-bs-dismiss="offcanvas"><i class="fas fa-times"></i></button>
             </div>
@@ -10,46 +10,38 @@
             <div class="offcanvas-body">
                 <nav class="canvas-menu">
                     <ul class="offcanvas-menu">
-                        <li><a class="active" href="#"><span>Demo</span></a>
-
-                            <ul class="mega-menu">
+                       
                                 <li>
                                     <!-- Mega Menu Content Start -->
                                     <div class="mega-menu-content">
                                         <div class="row">
-                                            <div class="col-xl-3">
+                                            <div class="col-xl-12">
                                                 <div class="menu-content-list">
-                                                    <a href="index.html" class="menu-content-list__link">Main Demo <span class="badge hot">Hot</span></a>
-                                                    <a href="index-course-hub.html" class="menu-content-list__link">Course Hub</a>
-                                                    <a href="index-online-academy.html" class="menu-content-list__link">Online Academy <span class="badge hot">Hot</span></a>
-                                                    <a href="index-university.html" class="menu-content-list__link">University</a>
-                                                    <a href="index-education-center.html" class="menu-content-list__link">Education Center <span class="badge hot">Hot</span></a>
+                                                <ul>
+                                                <li><a class="active" href="{{ url('/') }}"><span>Home</span></a>
+                                                <li><a href="{{ url('records')}}">Resources</a></li>
+                                                <li><a href="{{ url('forums')}}">Forums</a></li>
+                                                <li><a href="{{ url('webinars')}}">Webinars</a></li>
+                                                <li class="menu-item-has-children">
+                                                    <a href="#"><span>Courses & Trainings</span></a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="https://elearning.health.go.ug/course/index.php?categoryid=3" target="_blank"><span>Training Courses</span></a></li>
+                                                        <li><a href="https://hris2.health.go.ug/national_train/login" target="_blank"><span>IHRIS In-service Training</span></a></li>
+                                                
+                                                    </ul>
+                                                </li>
+                                            
+                                                <li><a href="{{ url('incidents')}}"><span>MCH Incident Reporting</span></a></li>
+                                                <li><a href="{{ url('incidents')}}"><span>News</span></a></li>
+                                                </ul>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-3">
-                                                <div class="menu-content-list">
-                                                    <a href="index-language-academic.html" class="menu-content-list__link">Language Academic</a>
-                                                    <a href="index-single-instructor.html" class="menu-content-list__link">Single Instructor</a>
-                                                    <a href="index-dev.html" class="menu-content-list__link">Dev <span class="badge new">New</span></a>
-                                                    <a href="index-online-art.html" class="menu-content-list__link">Online Art <span class="badge new">New</span></a>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6">
-                                                <div class="menu-content-banner" style="background-image: url(assets/images/home-megamenu-bg.jpg);">
-                                                    <h4 class="menu-content-banner__title">Achieve Your Goals With EduMall</h4>
-                                                    <a href="#" class="menu-content-banner__btn btn btn-primary btn-hover-secondary">Purchase now</a>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <!-- Mega Menu Content Start -->
                                 </li>
-                            </ul>
-
-
-
-
-                        </li>
+                         
                         <li><a href="#"><span>Become an Instructor</span></a></li>
                     </ul>
                 </nav>

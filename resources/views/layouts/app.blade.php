@@ -6,7 +6,6 @@
 @yield('styles')
 
 @yield('content')
-@yield('scripts')
 
 @include('layouts.partials.footer')
 
