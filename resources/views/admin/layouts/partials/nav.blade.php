@@ -19,9 +19,9 @@
 				<li aria-haspopup="true"><a href="#" class="sub-icon"><i class=""></i>Publish<i class="fe fe-chevron-down horizontal-icon"></i></a>
 					<ul class="sub-menu">
 						<!-- <li><h3 class="fs-14 mb-1" style="color:#000 !important;">PH Resources</h3></li> -->
-						<li aria-haspopup="true"><a href="{{ url('admin/publications/create') }}" class="slide-item"> New PH Resource</a></li>
-						<li aria-haspopup="true"><a href="{{ url('admin/publications') }}" class="slide-item">Manage PH Resources</a></li>
-						<li aria-haspopup="true"><a href="{{ url('admin/publications/moderate') }}" class="slide-item">Resource Comments</a></li>
+						<li aria-haspopup="true"><a href="{{ url('admin/publications/create') }}" class="slide-item"> Publish New Document</a></li>
+						<li aria-haspopup="true"><a href="{{ url('admin/publications') }}" class="slide-item">Manage Publication</a></li>
+						<li aria-haspopup="true"><a href="{{ url('admin/publications/moderate') }}" class="slide-item">Comments</a></li>
 						<!-- <li><h3 class="fs-14 mb-1" style="color:#000 !important;">DATA CATEGORIES</h3></li> -->
 
 						{{-- @can('manage_experts')
@@ -58,14 +58,14 @@
 				</li>
 				@endcan
 
-				@can('view_performance')
+				{{-- @can('view_performance')
 				<li aria-haspopup="true"><a href="#" class="sub-icon"><i class=""></i>Performance<i class="fe fe-chevron-down horizontal-icon"></i></a>
 					<ul class="sub-menu">
 						<li aria-haspopup="true"><a href="{{ url('admin/kpi') }}" class="slide-item">Add Indicator</a></li>
 						<li aria-haspopup="true"><a href="{{ url('admin/kpi/data') }}" class="slide-item">Inidicator Data</a></li>
 					</ul>
 				</li>
-				@endcan
+				@endcan --}}
 
 				<li aria-haspopup="true"><a href="#" class="sub-icon"><i class=""></i>Dropdown Lists<i class="fe fe-chevron-down horizontal-icon"></i></a>
 					<ul class="sub-menu">

@@ -14,7 +14,7 @@ class HomeController extends Controller
 {
     private $publicationsRepo,$authorsRepo,$quotesRepo,$areasRepo,$forumsRepo,$themesRepo;
 
-    public function __construct(PublicationsRepository $publicationsRepo, 
+    public function __construct(PublicationsRepository $publicationsRepo,
     AuthorsRepository $authorsRepo, QuotesRepository $quotesRepo,
 	AreasRepository $areasRepo,ForumsRepository $forumsRepo,ThemesRepository $themesRepo)
     {
@@ -25,10 +25,10 @@ class HomeController extends Controller
 		$this->forumsRepo 		= $forumsRepo;
 		$this->themesRepo       = $themesRepo;
     }
-    
+
     public function index(Request $request){
 
-        
+
         $request['rows']      = 10;
 
         $data['publications'] = $this->publicationsRepo->get($request);
@@ -41,14 +41,14 @@ class HomeController extends Controller
 		$data['types']        = $this->publicationsRepo->get_types();
         $data['quotes']       = $this->quotesRepo->get($request);
 		$data['subthemes']	  = $this->publicationsRepo->get_subthemes();
-		$data['themes']		  = $this->themesRepo->get($request);
+		$data['themes']		  = $this->themesRepo->get($request,true);
         $data['is_home']      = true;
 
         return view('home.index',$data);
     }
 
 
-    
+
 	private function get_categories(){
 
 		return array(
