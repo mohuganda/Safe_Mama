@@ -1,6 +1,7 @@
 
 <div class="d-block mb-2 mt-3">
     <span class="text-success">Content Tags:</span>
+    <br/>
 
     @php
      $colors = ['dark','info','warning'];
