@@ -1,9 +1,9 @@
 
-            	
+
 			<!-- ======================= Authors ======================== -->
 			<section class="space gray mt-3">
 				<div class="container">
-				
+
 					<div class="row justify-content-center" data-aos="slide-down">
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 							<div class="sec_title position-relative text-center mb-5">
@@ -11,10 +11,10 @@
 							</div>
 						</div>
 					</div>
-					
+
 					<!-- row -->
 					<div class="row align-items-center justify-content-center">
-						
+
 					@foreach($authors as $author)
 
 						<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6" data-aos="flip-left">
@@ -25,7 +25,7 @@
 										<img src="{{ asset('assets/img/categories/author.png')}}" style="max-width:25px;"/>
 									</div>
 									<div class="cats-box-caption">
-										<h4 class="fs-md mb-0 ft-medium m-catrio">{{truncate($author->name,30)}}</h4>
+										<h5 class="fs-md mb-0 ft-medium m-catrio">{{truncate($author->name,30)}}</h5>
 										<span class="text-muted">{{count($author->publications)}} Resources</span>
 									</div>
 								</a>
@@ -33,11 +33,11 @@
 						</div>
 
 					@endforeach
-						
-						
+
+
 					</div>
 					<!-- /row -->
-					
+
 					<div class="row justify-content-center mt-5 mb-3">
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 							<div class="position-relative text-center">
@@ -45,7 +45,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 			</section>
 			<!-- ======================= All category ======================== -->
