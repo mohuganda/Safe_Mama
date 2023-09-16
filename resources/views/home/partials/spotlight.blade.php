@@ -32,7 +32,7 @@
                      <!-- Slider Widget End -->
 
                  </div>
-                 <div class="col-md-3">
+                 <div class="col-md-3" style="margin-top: -30px;">
 
                      <!-- Slider Image Start -->
                      <div class="d-flex flex-column">
@@ -53,7 +53,7 @@
                      </div>
 
                  </div>
-                 <div class="col-md-3">
+                 <div class="col-md-3" style="margin-top: -30px;">
                      <div class="slider-image">
                          <div class="slider-image__image text-center text-lg-end" data-aos="fade-up" data-aos-duration="1000">
                              <img src="{{ asset('assets/mama/images/home-01-hero-image.png')}}" alt="" width="599" height="480">
