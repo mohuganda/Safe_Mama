@@ -191,6 +191,10 @@
             <!-- Course List End -->
             @endforeach
 
+            @if(count($publications) == 0)
+            <h2 class="text-muted text-center mt-3"><i class="fa fa-info-circle"></i> No results found</h2>
+            @endif
+
     </div>
     </div>
     </div>
