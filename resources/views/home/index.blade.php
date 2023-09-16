@@ -8,6 +8,7 @@
 @section('content')
 
     @include('home.partials.spotlight')
+    @include('home.partials.tags')
     @include('home.partials.mobilemenu')
     @include('home.partials.top_categories')
     @include('home.partials.themes')
