@@ -39,6 +39,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\CountriesController;
+use App\Http\Controllers\IncidentsController;
 use App\Http\Controllers\WebinarController;
 
 /*
@@ -373,4 +374,11 @@ Route::group(["prefix" => "dashboards"], function () {
     Route::get("/",  [GraphController::class, 'index']);
     Route::get("/kpi",  [GraphController::class, 'kpi_comparison']);
     Route::get("/kpi_comparison_data",  [GraphController::class, 'kpi_comparison_data']);
+});
+
+Route::group(["prefix" => "incidents"], function () {
+
+    Route::get("/", [IncidentsController::class, 'create'])->name('incidents.create');
+    Route::post("/publish", [IncidentsController::class, 'store'])->name('incidents.publish');
+
 });
