@@ -10,7 +10,7 @@
 <div class="container">
 <div class="row justify-content-center py-3 padded-top">
 	<h3>Webinars</h3>
-	<p>Top instructors from around the world teach millions of students</p>
+	<p>Reproductive, Maternal and Child Health Webinars to improve your Skills</p>
 </div>
 
 <div class="banner-section section-padding-02">

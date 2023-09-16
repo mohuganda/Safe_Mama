@@ -10,7 +10,7 @@ class Publication extends Model
     use HasFactory;
 
     protected $table = "publication";
-    protected $appends = ['theme','label','value','is_favourite','approved_comments','pending_comments','has_attachments',"image"];
+    protected $appends = ['label','value','is_favourite','approved_comments','pending_comments','has_attachments',"image"];
 
     public function file_type(){
         return $this->belongsTo(PublicationType::class,"file_type_id","id");
@@ -38,13 +38,18 @@ class Publication extends Model
     }
 
     public function sub_theme(){
-        return $this->belongsTo(SubThemeticArea::class,"sub_thematic_area_id","id");
+        return $this->belongsTo(ThemeticArea::class, "thematic_area_id", "id");
     }
 
 
-    public function getThemeAttribute(){
-        return @$this->sub_theme->theme;
+    public function theme()
+    {
+        return $this->belongsTo(ThemeticArea::class, "thematic_area_id", "id");
     }
+
+    // public function getThemeAttribute(){
+    //     return @$this->sub_theme->theme;
+    // }
 
     public function getLabelAttribute(){
         return substr($this->title,0,100);
@@ -71,7 +76,7 @@ class Publication extends Model
     public function getIsFavouriteAttribute(){
         if(!current_user())
         return false;
-        
+
         $fav = Favourite::where('user_id',current_user()->id)->where('publication_id',$this->id)->first();
         return ($fav)?true:false;
     }

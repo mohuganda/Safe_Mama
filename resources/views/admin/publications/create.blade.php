@@ -38,8 +38,8 @@
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label class="form-label" for="description">Publication Title</label>
-                                <textarea placeholder="Title" rows="6" class="form-control summernote-sm" id="title" 
-                                name="title" 
+                                <textarea placeholder="Title" rows="6" class="form-control summernote-sm" id="title"
+                                name="title"
                                 required>{{ form_edit('title',$publication,'title') }}</textarea>
                             </div>
                         </div>
@@ -63,8 +63,8 @@
 
                         <div class="col-md-12">
                             <div class="mb-3">
-                                <label class="form-label" for="publication">Sub Theme</label>
-                                @include('partials.publications.subtheme_dropdown',['field'=>'sub_theme','required'=>'required','selected'=>form_edit('sub_theme',$publication,'sub_thematic_area_id')])
+                                <label class="form-label" for="publication">Theme</label>
+                                @include('partials.publications.theme_dropdown',['field'=>'thematic_area_id','required'=>'required','selected'=>form_edit('thematic_area_id',$publication,'thematic_area_id')])
                             </div>
                         </div>
 
@@ -103,10 +103,10 @@
                             <div class="mb-3">
                                 <label class="form-label" for="publication">File Category</label>
                                 @include('partials.publications.filecategory_dropdown',['field'=>'publication_category_id',
-                                'selected'=>(@$row->publication_category_id)?$row->publication_category_id:''])
+                                'selected'=>form_edit('publication_category_id',$publication,'publication_catgory_id')])
                             </div>
                         </div>
-                     
+
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label class="form-label" for="publication">Search Tags</label>
@@ -114,12 +114,12 @@
                             </div>
                         </div>
 
-                        <div class="col-md-12">
+                        {{-- <div class="col-md-12">
                             <div class="mb-3">
                                 <label class="form-label" for="publication">Geographical Coverage</label>
                                 @include('partials.publications.area_dropdown',['field'=>'geo_area_id','required'=>'required','selected'=>form_edit('geo_area_id',$publication,'geographical_coverage_id')])
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label class="form-label" for="publication">Cover Image</label>

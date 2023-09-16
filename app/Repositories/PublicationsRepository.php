@@ -38,11 +38,11 @@ class PublicationsRepository extends SharedRepo{
 
          //search by keyword
         if($request->term){
-            
+
             $pubs->where('title','like','%'.$request->term.'%');
             $pubs->orWhere('publication','like',$request->term.'%');
             $pubs->orWhere('description','like','%'.$request->term.'%');
-            
+
             $authors     = Author::where('name','like',$request->term.'%')->get()->pluck('id');
             $tags        = Tag::where('tag_text','like',$request->term.'%')->get()->pluck('id');
             $pub_tag_ids = PublicationTag::whereIn('tag_id',$tags)->get()->pluck('publication_id');
@@ -98,10 +98,10 @@ class PublicationsRepository extends SharedRepo{
          //search by theme
         if($request->thematic_area_id || $request->theme ){
 
-            $category = ($request->thematic_area_id)?$request->thematic_area_id:$request->theme;
+            $theme = ($request->thematic_area_id)?$request->thematic_area_id:$request->theme;
 
-            $subthems = SubThemeticArea::where('thematic_area_id',$category)->get()->pluck('id');
-            $pubs->whereIn('sub_thematic_area_id',$subthems);
+            //$subthems = SubThemeticArea::where('thematic_area_id',$category)->get()->pluck('id');
+            $pubs->where('thematic_area_id',$theme);
 
         }
 
@@ -122,14 +122,14 @@ class PublicationsRepository extends SharedRepo{
     }
 
     public function with_pending_comments($request){
-        
+
         $rows_count = ($request->rows)?$request->rows:20;
 
         $pubs = Publication::orderBy('id','desc');
         $pubs = $pubs->whereHas('comments', function($q){
             $q->where('status', 'pending');
         });
-        
+
         $results = $pubs->paginate($rows_count);
         return $results;
     }
@@ -145,17 +145,17 @@ class PublicationsRepository extends SharedRepo{
 
         return $result;
     }
-    
+
     public function favourites(Request $request){
 
         $rows_count = ($request->rows)?$request->rows:20;
         $user_id    =  current_user()->id;
-        
+
         $favs = Favourite::where('user_id',$user_id)
         ->get()
         ->pluck('publication_id')
         ->toArray();
-    
+
         $pubs = Publication::orderBy('id','desc');
         $pubs->whereIn('id',$favs);
 
@@ -179,7 +179,7 @@ class PublicationsRepository extends SharedRepo{
         if($request->original_id):
 
             $parent = $this->find($request->original_id);
-            $pub->sub_thematic_area_id     = $parent->sub_thematic_area_id;
+            $pub->thematic_area_id     = $parent->thematic_area_id;
             $pub->geographical_coverage_id = $parent->geographical_coverage_id;
             $pub->is_version = 1;
             $pub->title                    = $parent->title;
@@ -187,8 +187,9 @@ class PublicationsRepository extends SharedRepo{
             $pub->version_no               = ($versions_now ==0)?$versions_now +2: $versions_now+1;
 
         else:
-           
-        $pub->sub_thematic_area_id      = $request->sub_theme;
+
+        $pub->thematic_area_id       = $request->thematic_area_id;
+        $pub->publication_catgory_id = $request->publication_category_id;
 
         if(!$request->geo_area_id):
 
@@ -204,7 +205,7 @@ class PublicationsRepository extends SharedRepo{
         else:
             $pub->geographical_coverage_id  = $request->geo_area_id;
         endif;
-        
+
         $pub->title                     = $request->title;
 
         endif;
@@ -223,7 +224,7 @@ class PublicationsRepository extends SharedRepo{
         //check if it's video type
         if(strpos(strtolower($file_type->name),'video')>-1)
          $pub->is_video = 1;
-      
+
         //save cover
         if($request->hasFile('cover')):
 
@@ -348,14 +349,14 @@ class PublicationsRepository extends SharedRepo{
 
         $upfiles   = (!is_array($files))?[$files]:$files;
         $file_path = null;
-        
+
         foreach ($upfiles as $file) {
 
             $description = $file->getClientOriginalName();
             $file_name   = md5_file($file->getRealPath());
             $extension   = $file->guessExtension();
             $file_path   = $file_name.'.'.$extension;
-           
+
             $file->move(storage_path().'/app/public/uploads/publications/',$file_path);
 
         //insert if to be in different table
@@ -366,7 +367,7 @@ class PublicationsRepository extends SharedRepo{
             "file"=> $file_path,
             "publication_id"=>$publication_id
            ];
-       
+
          PublicationAttachment::insert($kyc);
 
         endif;

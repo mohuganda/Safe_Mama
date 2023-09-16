@@ -15,7 +15,7 @@ class PublicationsApiController extends Controller
 
     private $publicationsRepo,$authorsRepo,$quotesRepo,$themesRepo;
 
-    public function __construct(PublicationsRepository $publicationsRepo, 
+    public function __construct(PublicationsRepository $publicationsRepo,
     AuthorsRepository $authorsRepo, QuotesRepository $quotesRepo, ThemesRepository $themesRepo){
 
         $this->publicationsRepo = $publicationsRepo;
@@ -23,7 +23,7 @@ class PublicationsApiController extends Controller
         $this->quotesRepo       = $quotesRepo;
         $this->themesRepo      = $themesRepo;
     }
-   
+
 
     /**
         * @OA\Get(
@@ -50,7 +50,9 @@ class PublicationsApiController extends Controller
         */
     public function index(Request $request)
     {
+        $request['theme'] = $request->id;
         $publications = $this->publicationsRepo->get($request);
+
         return [
             "status" => 200,
             "data" => $publications
@@ -58,7 +60,7 @@ class PublicationsApiController extends Controller
     }
 
 
-    
+
     /**
         * @OA\Get(
         * path="/knowhub/api/publications/categories",
@@ -83,8 +85,8 @@ class PublicationsApiController extends Controller
         ];
     }
 
-    
-   
+
+
     /**
     * @OA\Post(
     ** path="/knowhub/api/publications",
@@ -206,7 +208,7 @@ class PublicationsApiController extends Controller
     public function category_publications($category_id)
     {
         $publications = $this->publicationsRepo->get_theme_publications($category_id);
-        
+
         return [
             "status" => 200,
             "data" =>$publications
@@ -215,7 +217,7 @@ class PublicationsApiController extends Controller
     public function show($publication_id)
     {
         $publication = $this->publicationsRepo->find($publication_id);
-        
+
         return [
             "status" => 200,
             "data" =>$publication
