@@ -7,7 +7,7 @@
 
                         <!-- Header Logo Start -->
                         <div class="header-logo">
-                            <a class="header-logo__logo" href="{{ url('/') }}"><img src="{{ asset('assets/mama/images/logo.png')}}"  width="60px" alt="Logo"></a>
+                            <a class="header-logo__logo" href="{{ url('/') }}"><img src="{{ asset('assets/mama/images/logo.png')}}"   alt="Logo"></a>
                         </div>
                         <!-- Header Logo End -->
 
@@ -26,10 +26,10 @@
                                             <ul class="sub-menu">
                                                 <li><a href="https://elearning.health.go.ug/course/index.php?categoryid=3" target="_blank"><span>Training Courses</span></a></li>
                                                 <li><a href="https://hris2.health.go.ug/national_train/login" target="_blank"><span>IHRIS In-service Training</span></a></li>
-                                           
+
                                             </ul>
                                         </li>
-                                       
+
                                         <li><a href="{{ url('incidents')}}"><span>MCH Incident Reporting</span></a></li>
                                         <li><a href="{{ url('incidents')}}"><span>News</span></a></li>
                                     </ul>
@@ -41,7 +41,7 @@
                             <!-- Header Mini Cart End -->
 
                             <!-- Header User Button Start -->
-                            
+
                             @guest
                                 <div class="header-user d-none d-lg-flex">
                                     <div class="header-user__button">
