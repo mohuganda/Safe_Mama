@@ -36,9 +36,9 @@
         04.08 - Partners
         04.09 - Category
         04.10 - Edumall Box
-        04.11 - Counter 
-        04.12 - Event 
-        04.13 - Blog 
+        04.11 - Counter
+        04.12 - Event
+        04.13 - Blog
         04.14 - Newsletter
         04.15 - About
         04.16 - Academics
@@ -2327,7 +2327,7 @@ span.flatpickr-weekday {
   margin-right: 28px;
 }
 .header-logo__logo {
-  width: 148px;
+  width: 200px;
 }
 @media only screen and (max-width: 767px) {
   .header-logo__logo {
@@ -9502,7 +9502,7 @@ span.flatpickr-weekday {
 }
 
 /*--
-/*  04.11 - Counter 
+/*  04.11 - Counter
 /*----------------------------------------*/
 .counter-section {
   padding: 100px 0;
@@ -9923,7 +9923,7 @@ span.flatpickr-weekday {
 }
 
 /*--
-/*  04.12 - Event 
+/*  04.12 - Event
 /*----------------------------------------*/
 .event-section {
   overflow: hidden;
@@ -10263,7 +10263,7 @@ span.flatpickr-weekday {
 }
 
 /*--
-/*  04.13 - Blog 
+/*  04.13 - Blog
 /*----------------------------------------*/
 .list-blog__items {
   padding: 0;
