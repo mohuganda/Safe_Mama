@@ -10,9 +10,9 @@
 
                          <!-- Slider Caption Start -->
                          <div class="slider-caption">
-                             <h2 class="">Empowerment of Front Line Health Workers with Advanced Knowledge and skills in Reproductive, Maternal and Child Health Care</h2>
-
-                             <h3 class="slider-caption__sub-title">Preventing <mark>Maternal</mark> Mortality.</h3>
+                             <h3 class="">Empowerment of Front Line Health Workers with Advanced Knowledge and skills in Reproductive, Maternal and Child Health Care</h3>
+                             <br/>
+                             <h4 class="slider-caption__sub-title">Preventing <mark>Maternal</mark> Mortality.</h4>
                          </div>
                          <!-- Slider Caption End -->
 
