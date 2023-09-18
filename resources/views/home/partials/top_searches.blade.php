@@ -27,19 +27,12 @@
 							@endphp
 							
                             <div class="col-xl col-lg-3 col-md-4 col-sm-6">
-                            @php
-                                if( is_valid_image(storage_link('uploads/publications/'.$row->cover))):
-                                    $image_link = storage_link('uploads/publications/'.$row->cover);
-                                else:
-                                    $image_link = storage_link('uploads/publications/cover.jpg');
-                                endif;
-                            @endphp
-
+                        
                                 <!-- Course Start -->
                                 <div class="course-item" data-aos="fade-up" data-aos-duration="1000">
                                     <div class="course-header">
                                         <div class="course-header__thumbnail ">
-                                            <a href="{{ url('records/resource') }}?id={{$row->id}}"><img src="{{ $image_link }}" alt="courses" width="258" height="173"></a>
+                                            <a href="{{ url('records/resource') }}?id={{$row->id}}"><img src="{{ storage_link('uploads/publications/'.$row->cover) }}" alt="courses" width="258" height="173"></a>
                                         </div>
                                     </div>
                                     <div class="course-info">
