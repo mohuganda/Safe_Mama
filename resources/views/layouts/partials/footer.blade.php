@@ -54,7 +54,7 @@
 				<!-- Footer Widget Start -->
 				<div class="footer-widget text-center">
                     <div class="col-md-2">
-					  <a href="#" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/logo.png')}}" alt="Logo" width="60"></a>
+					  <a href="#" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/world_bank.png')}}" alt="Logo" width="60"></a>
                     </div>
                     <div class="col-md-2">
 					  <a href="#" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/moh_logo.png')}}" alt="Logo" width="60"></a>
