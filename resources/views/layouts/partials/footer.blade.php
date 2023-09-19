@@ -53,7 +53,12 @@
 			<div class="col-lg-4">
 				<!-- Footer Widget Start -->
 				<div class="footer-widget text-center">
-					<a href="#" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/logo.png')}}" alt="Logo" width="60"></a>
+                    <div class="col-sm-2">
+					  <a href="#" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/world_bank.png')}}" alt="Logo" width="80"></a>
+                    </div>
+                    <div class="col-sm-2">
+					  <a href="#" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/moh_logo.png')}}" alt="Logo" width="70"></a>
+                    </div>
 					<div class="footer-widget__social">
 						<a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
 						<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>

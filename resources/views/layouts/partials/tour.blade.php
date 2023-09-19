@@ -1,12 +1,12 @@
 
-@if(!get_cookie('CDC_Tour_Finished') || !env('SITE_LIVE')):
+@if(!get_cookie('Tour_Finished') || !env('SITE_LIVE')):
 
 <script src="{{ asset('assets/plugins/tour/tour.js')}}"></script>
 
 <script>
 
 let tourOptions = {
-    
+
     options : {
         darkLayerPersistence : true,
         next : 'Next',
@@ -14,7 +14,7 @@ let tourOptions = {
         finish : 'Okay!',
         mobileThreshold: 768
     },
-    
+
     tips : [
 
     {
@@ -67,15 +67,15 @@ let tourOptions = {
           fetch("{{ url('/endtour')}}");
         }
     }
-    
-    
+
+
     ],
     'on-product-tour-js-exit':function(){
     console.log('TOur ended');
     }
 };
 
-ProductTourJS.init(tourOptions); 
+ProductTourJS.init(tourOptions);
 ProductTourJS.start();
 
 </script>
