@@ -44,10 +44,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    protected $appends = ["names"."area"];
+    protected $appends = ["names","area"];
 
     public function getNamesAttribute(){
-        return ($this->firstname)?$this->firstname." ".$this->lastname:$this->name;
+
+        return ($this->firstname)?$this->firstname." ".$this->lastname:(($this->name)?$this->name:"");
     }
 
     public function preferences(){
@@ -59,7 +60,7 @@ class User extends Authenticatable
      }
 
      public function getAreaAttribute(){
-        return GeoCoverage::where('name','like','%'.$this->country->name.'%')->first();
+        return "";
      }
 
      public function access_level(){

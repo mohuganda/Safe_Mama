@@ -13,6 +13,7 @@ class WebinarsRepository extends SharedRepo{
         $webinars = Webinar::orderBy('webinar_date','desc');
 
         if($request->term){
+            
             $webinars->where('title','like','%'.$request->term.'%');
             $webinars->orWhere('description','like','%'.$request->term.'%');
         }

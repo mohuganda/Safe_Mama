@@ -54,8 +54,8 @@ class PublicationsApiController extends Controller
         $publications = $this->publicationsRepo->get($request);
 
         return [
-            "status" => 200,
-            "data" => $publications
+            "status"  => 200,
+            "data"    => $publications
         ];
     }
 
@@ -80,8 +80,9 @@ class PublicationsApiController extends Controller
     {
         $categories = $this->themesRepo->get($request, true);
         return [
-            "status" => 200,
-            "data"   => $categories
+            "status"   => 200,
+            'subthemes'=> $this->themesRepo->get_all_subthemes($request,true),
+            "data"     => $categories
         ];
     }
 
@@ -205,15 +206,17 @@ class PublicationsApiController extends Controller
         * )
         */
 
-    public function category_publications($category_id)
+    public function category_publications($themeatic_area_id)
     {
-        $publications = $this->publicationsRepo->get_theme_publications($category_id);
+        $publications = $this->publicationsRepo->get_theme_publications($themeatic_area_id);
 
         return [
             "status" => 200,
             "data" =>$publications
         ];
+        
     }
+
     public function show($publication_id)
     {
         $publication = $this->publicationsRepo->find($publication_id);

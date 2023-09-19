@@ -31,7 +31,10 @@ class ThemesRepository{
         return $themes;
     }
 
-    public function get_all_subthemes(Request $request){
+    public function get_all_subthemes(Request $request,$all=false){
+
+        if($all)
+            return SubThemeticArea::all();
 
         $rows_count = ($request->rows)?$request->rows:24;
         $themes = SubThemeticArea::orderBy('id','desc');

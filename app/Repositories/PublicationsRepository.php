@@ -27,8 +27,7 @@ class PublicationsRepository extends SharedRepo{
 
         $rows_count = ($request->rows)?$request->rows:20;
         $pubs       = Publication::with([
-            'file_type',
-            'author','sub_theme','category'])->orderBy('id','desc')->where('is_version',0);
+            'file_type','author','theme','category'])->orderBy('id','desc')->where('is_version',0);
 
         if($request->order_by_visits)
          $pubs->orderBy('id','desc');
@@ -235,7 +234,7 @@ class PublicationsRepository extends SharedRepo{
 
         $saved = ($request->id)?$pub->update():$pub->save();
 
-        $id = ($request->id)?$request->id:$pub->id;
+        $id    = ($request->id)?$request->id:$pub->id;
 
         //save attachments
         if($request->hasFile('files')):
@@ -256,9 +255,9 @@ class PublicationsRepository extends SharedRepo{
         $pub = Publication::with([
             'file_type',
             'attachments',
-            'author','sub_theme',
+            'author','theme',
             'comments','parent',
-            'summaries','versioning'])->where('sub_thematic_area_id',$id)->get();
+            'summaries','versioning'])->where('thematic_area_id',$id)->get();
 
         return $pub;
     }
@@ -268,7 +267,7 @@ class PublicationsRepository extends SharedRepo{
         $pub = Publication::with([
             'file_type',
             'attachments',
-            'author','sub_theme',
+            'author','theme',
             'comments','parent',
             'summaries','versioning'])->find($id);
 

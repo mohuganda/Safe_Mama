@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\ForumsApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\PublicationsApiController;
+use App\Http\Controllers\Api\WebinarApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,12 @@ Route::group(["prefix" =>"forums"],function(){
     Route::get('/', [ForumsApiController::class,'index']);
     Route::post('/join', [ForumsApiController::class,'join']);
     Route::post('/comment', [ForumsApiController::class,'comment']);
+
+});
+
+Route::group(["prefix" =>"webinars"],function(){
+
+    Route::get('/', [WebinarApiController::class,'index']);
 
 });
 
