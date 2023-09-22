@@ -192,6 +192,7 @@ class PublicationsRepository extends SharedRepo{
         $pub->sub_thematic_area_id       = $request->sub_thematic_area_id;
         $pub->publication_catgory_id = $request->publication_category_id;
 
+
         if(!$request->geo_area_id):
 
         $user = @current_user();
@@ -216,6 +217,7 @@ class PublicationsRepository extends SharedRepo{
         $pub->description          = $request->description;
         $pub->file_type_id         = $request->file_type;
         $pub->visits               = 0;
+        $pub->version = 0;
 
         if($request->is_active)
         $pub->is_active = $request->is_active;
