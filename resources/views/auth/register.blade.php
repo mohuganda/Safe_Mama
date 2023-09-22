@@ -18,12 +18,12 @@
 @section('content')
 
 <div class="row container align-items-center justify-content-center py-1 ">
-					
+
 					<div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 padded-top mb-3">
-					   
+
 							<form class="border p-3 rounded bg-white"  method="POST" action="{{ route('registration') }}">
                                <h3 class="py-3 text-success">Register for an account</h3>
-							   
+
 							   @csrf
 
 								<div class="row">
@@ -89,7 +89,7 @@
 											</span>
                                         @enderror
 									</div>
-								
+
 
 									<div class="form-group col-md-12">
 										<label>Preferences *</label>
@@ -104,8 +104,8 @@
 									</div>
 
 								</div>
-								
-							
+
+
 								<div class="row">
 									<div class="form-group col-md-6">
 										<label>Password *</label>
@@ -116,35 +116,35 @@
                                         </span>
                                         @enderror
 									</div>
-									
+
 									<div class="form-group col-md-6">
 										<label>Confirm Password *</label>
 										<input type="password" name="password_confirmation" class="form-control" placeholder="Confirm Password*">
 									</div>
 								</div>
-								
+
 								<div class="form-group">
 									<p>By registering your details, you agree with our Terms & Conditions, and Privacy and Cookie Policy.</p>
 								</div>
-								
+
 								<div class="form-group">
 									<div class="d-flex align-items-center justify-content-between">
 										<div class="flex-1">
 											<input id="subscribe" class="checkbox-custom" name="subscribe" type="checkbox">
 											<label for="subscribe" class="checkbox-custom-label">Sign me up for the Newsletter!</label>
-										</div>		
+										</div>
 									</div>
 								</div>
 
-								
+
 								<div class="row justify-content-center">
 									<div class="form-group col-lg-6">
-										<button type="submit" class="btn btn-md full-width theme-bg text-light fs-md ft-medium">Create An Account</button>
+										<button type="submit" class="btn btn-primary">Create An Account</button>
 									</div>
 								</div>
 							</form>
 						</div>
-						
+
 					</div>
 
 
