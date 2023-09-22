@@ -67,6 +67,12 @@
                                 @include('partials.publications.theme_dropdown',['field'=>'thematic_area_id','required'=>'required','selected'=>form_edit('thematic_area_id',$publication,'thematic_area_id')])
                             </div>
                         </div>
+                           <div class="col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label" for="publication">Sub Theme</label>
+                                @include('partials.publications.subtheme_dropdown',['field'=>'sub_thematic_area_id','required'=>'required','selected'=>form_edit('sub_thematic_area_id',$publication,'sub_thematic_area_id')])
+                            </div>
+                        </div>
 
                         <div class="col-md-12">
                             <!-- Section Label -->
