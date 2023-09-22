@@ -14,7 +14,8 @@ class ForumsRepository extends SharedRepo{
     public function get(Request $request,$approved=1){
 
         $rows_count = ($request->rows)?$request->rows:20;
-        $forums = Forum::with(['user', 'tags', 'comments'])->orderBy('created_at','desc');
+        $forums = Forum::with([ 'user','tags', 'comments'])->orderBy('created_at','desc');
+        //'user'
 
         if($request->term){
             $forums->where('forum_title','like','%'.$request->term.'%');
@@ -30,7 +31,7 @@ class ForumsRepository extends SharedRepo{
         $forums->where('status',$approved);
 
          //Access levels effect to query results
-         $this->access_filter($forums);
+         //$this->access_filter($forums);
 
         $results =  $forums->paginate($rows_count);
 

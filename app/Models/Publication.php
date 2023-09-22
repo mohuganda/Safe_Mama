@@ -10,7 +10,7 @@ class Publication extends Model
     use HasFactory;
 
     protected $table = "publication";
-    protected $appends = ['label','value','is_favourite','approved_comments','pending_comments','has_attachments',"image"];
+    protected $appends = ['label','value','is_favourite','approved_comments','pending_comments','has_attachments',"image","published_at"];
 
     public function file_type(){
         return $this->belongsTo(PublicationType::class,"file_type_id","id");
@@ -28,6 +28,10 @@ class Publication extends Model
         return count($this->attachments)>0;
     }
 
+    public function getPublishedAtAttribute(){
+        return text_date($this->created_at);
+    }
+    
 
     public function tags(){
         return $this->hasMany(PublicationTag::class);
@@ -37,10 +41,9 @@ class Publication extends Model
         return $this->belongsTo(Author::class);
     }
 
-    public function sub_theme(){
-        return $this->belongsTo(ThemeticArea::class, "thematic_area_id", "id");
-    }
-
+    // public function sub_theme(){
+    //     return $this->belongsTo(ThemeticArea::class, "thematic_area_id", "id");
+    // }
 
     public function theme()
     {
@@ -93,6 +96,7 @@ class Publication extends Model
     }
 
     public function getPendingCommentsAttribute(){
+
         $comments = PublicationComment::where('publication_id',$this->id)
         ->where('status','pending')
         ->get();
