@@ -217,7 +217,7 @@ class PublicationsRepository extends SharedRepo{
         $pub->description          = $request->description;
         $pub->file_type_id         = $request->file_type;
         $pub->visits               = 0;
-        $pub->version = 0;
+
 
         if($request->is_active)
         $pub->is_active = $request->is_active;
