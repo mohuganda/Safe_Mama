@@ -65,6 +65,15 @@
 										</span>
 										@enderror
 								   </div>
+                                   <div class="form-group col-md-6">
+										<label>Registration Number (For Health Professionals Ony)</label>
+										<input type="tel" class="form-control @error('phone') is-invalid @enderror" name="registration_number" placeholder="Phone Number*" value="{{ old('phone') }}" required autocomplete="off" autofocus>
+										@error('phone')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
+								   </div>
 
 								   <div class="form-group col-md-6">
 										<label>Job Title *</label>

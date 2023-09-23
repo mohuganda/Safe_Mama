@@ -14,7 +14,7 @@ use Mail;
 
 class UsersRepository {
 
-    
+
 
     public function save(Request $request){
 
@@ -25,11 +25,12 @@ class UsersRepository {
         $user->email         = $request->email;
         $user->country_id    = $request->country_id;
         $user->phone_number  = $request->phone;
-        $user->job_title     = $request->job; 
+        $user->registration_number  = $request->registration_number;
+        $user->job_title     = $request->job;
         $user->password      = Hash::make($request->password);
 
         $token = Str::random(10);
-        $user->verification_token =$token; 
+        $user->verification_token =$token;
 
         if($request->subscribe)
         $user->is_subscribed     = ($request->subscribe=="on")?true:false;
@@ -71,7 +72,7 @@ class UsersRepository {
     }
 
     public function update_profile(Request $request){
-        
+
         $user = User::find(current_user()->id);
 
         $user->first_name = $request->first_name;
@@ -101,7 +102,7 @@ class UsersRepository {
         return $user->update();
     }
 
-  
+
 
 
 }
