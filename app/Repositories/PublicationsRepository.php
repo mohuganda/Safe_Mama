@@ -261,7 +261,7 @@ class PublicationsRepository extends SharedRepo{
             'attachments',
             'author','theme',
             'comments','parent',
-            'summaries','versioning'])->where('thematic_area_id',$id)->get();
+            'summaries','versioning','category'])->where('thematic_area_id',$id)->get();
 
         return $pub;
     }

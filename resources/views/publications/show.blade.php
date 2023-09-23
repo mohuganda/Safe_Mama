@@ -31,7 +31,6 @@
 									</h4>
 								</div>
 								<div class="jbl_location mb-3">
-
 									<span>{!! $publication->theme->description !!}</span>
 								</div>
 								
