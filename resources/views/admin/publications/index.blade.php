@@ -28,12 +28,12 @@
 					<div class="col-md-3">
 						<div class="form-group">
 							<label for="source">Description</label>
-							<input type="text" name="description" id="filterDesc" class="form-control" 
+							<input type="text" name="description" id="filterDesc" class="form-control"
                               value="{{ @$search->description ?? ''}}"
                               placeholder="Filter by Description">
 						</div>
 					</div>
-                    
+
 					<div class="col-md-3">
 						<div class="form-group">
 							<label for="source">Source / Author</label>
@@ -54,7 +54,7 @@
 						<button type="submit" id="filterButton" class="btn btn-primary btn-sm">Filter Data</button>
 						<button type="button" id="reset" class="btn btn-secondary btn-sm">Reset</button>
                         <button type="button" id="exportButton" class="btn btn-success btn-sm">Export Data</button>
-						
+
 					</div>
 				</div>
             </form>
@@ -74,20 +74,21 @@
 				</thead>
 				<tbody>
 
-					@php 
+					@php
                     $i = 1;
                     @endphp
 
 					@foreach($publications as $publication)
 						<tr>
 							<td width="5%"><i class="fa {{ $publication->file_type->icon }} fa-2x text-muted"></i></td>
-							<td>
+							<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                               <a href="{{ $publication->publication }}" target="_blank">
-								{!!truncate($publication->title, 30) !!}
+								{!!(htmlspecialchars_decode($publication->title)) !!}
                               </a>
 							</td>
-							<td>
-								{!! truncate($publication->description, 50) !!}
+							<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+
+								{!!(htmlspecialchars_decode($publication->description)) !!}
 							</td>
 							<td>
 								{{ $publication->author->name ?? '' }}
@@ -96,9 +97,9 @@
 								{{ $publication->is_active }}
 							</td>
 							<td>
-							
+
 								<!-- Edit Modal Action -->
-								<a href="{{ url('admin/publications/edit') }}?id={{$publication->id}}" type="button" class="btn btn-primary btn-sm" 
+								<a href="{{ url('admin/publications/edit') }}?id={{$publication->id}}" type="button" class="btn btn-primary btn-sm"
 								>Edit</a>
 								<!-- Delete Modal Action -->
 								<a class="btn btn-sm btn-danger ml-1" href="javascript:void(0);" onclick="openDeleteModal('{{ $publication->id }}')" class="text-danger"> Delete</a>
