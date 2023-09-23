@@ -179,6 +179,7 @@ class PublicationsRepository extends SharedRepo{
 
             $parent = $this->find($request->original_id);
             $pub->thematic_area_id     = $parent->thematic_area_id;
+            $pub->sub_thematic_area_id     = $parent->sub_thematic_area_id;
             $pub->geographical_coverage_id = $parent->geographical_coverage_id;
             $pub->is_version = 1;
             $pub->title                    = $parent->title;
@@ -188,7 +189,9 @@ class PublicationsRepository extends SharedRepo{
         else:
 
         $pub->thematic_area_id       = $request->thematic_area_id;
+        $pub->sub_thematic_area_id       = $request->sub_thematic_area_id;
         $pub->publication_catgory_id = $request->publication_category_id;
+
 
         if(!$request->geo_area_id):
 
@@ -214,6 +217,7 @@ class PublicationsRepository extends SharedRepo{
         $pub->description          = $request->description;
         $pub->file_type_id         = $request->file_type;
         $pub->visits               = 0;
+        $pub->version = 0;
 
         if($request->is_active)
         $pub->is_active = $request->is_active;
