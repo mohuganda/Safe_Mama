@@ -81,12 +81,12 @@
 					@foreach($publications as $publication)
 						<tr>
 							<td width="5%"><i class="fa {{ $publication->file_type->icon }} fa-2x text-muted"></i></td>
-							<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+							<td style="width:15%; text-overflow: ellipsis !important;">
                               <a href="{{ $publication->publication }}" target="_blank">
 								{!!(htmlspecialchars_decode($publication->title)) !!}
                               </a>
 							</td>
-							<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+							<td style=" width:15%; text-overflow: ellipsis !important;">
 
 								{!!(htmlspecialchars_decode($publication->description)) !!}
 							</td>
