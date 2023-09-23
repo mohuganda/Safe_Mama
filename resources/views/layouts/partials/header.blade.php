@@ -55,8 +55,8 @@
                 </a>
                </li> -->
                 @else
-                    <nav class="menu-primary">
-                        <ul class="menu-primary__container">
+
+                        <ul class="">
 
                             <li class="menu-item-has-children">
                                 <a href="#"><span>Account </span></a>
@@ -94,7 +94,7 @@
                             </li>
 
                         </ul>
-                    </nav>
+
                 </div>
 
             @endguest
