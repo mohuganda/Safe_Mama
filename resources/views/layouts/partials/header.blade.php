@@ -33,13 +33,13 @@
                             </li>
 
                             <li><a href="{{ url('incidents') }}"><span>MCH Incident Reporting</span></a></li>
-
+                            <div class="header-user d-none d-lg-flex">
                             @guest
-                                <div class="header-user d-none d-lg-flex">
+
                                     <div class=" {{ $class ?? '' }}">
                                         <li><a href="{{ url('login') }}"><span>Sign In</span></a></li>
 
-                                    </div>
+
                                 @else
                                     <li class="menu-item-has-children">
                                         <a href="#"><span>Account </span></a>
@@ -103,6 +103,7 @@
 
     </div>
     <!-- Header Main Wrapper End -->
+</div>
 </div>
 </div>
 <!-- Header Main End -->
