@@ -36,7 +36,6 @@
                             <div class="header-user d-none d-lg-flex">
                             @guest
 
-                                    <div class=" {{ $class ?? '' }}">
                                         <li><a href="{{ url('login') }}"><span>Sign In</span></a></li>
 
 
@@ -82,8 +81,6 @@
                     </nav>
                 </div>
                 <!-- Header Navigation End -->
-
-            </div>
 
 
 
