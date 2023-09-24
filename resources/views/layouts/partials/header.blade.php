@@ -33,7 +33,51 @@
                             </li>
 
                             <li><a href="{{ url('incidents') }}"><span>MCH Incident Reporting</span></a></li>
-                            {{-- <li><a href="{{ url('incidents')}}"><span>News</span></a></li> --}}
+                            <div class="header-user d-none d-lg-flex">
+                            @guest
+
+                                    <div class=" {{ $class ?? '' }}">
+                                        <li><a href="{{ url('login') }}"><span>Sign In</span></a></li>
+
+
+                                @else
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><span>Account </span></a>
+                                        <ul class="sub-menu">
+                                            @if (is_admin())
+                                                <li class="">
+                                                    <a href="{{ route('admin.index') }}">
+                                                        <i class="fa fa-link mr-1"></i>Admin Panel
+                                                    </a>
+                                                </li>
+                                            @endif
+                                            <li class="">
+                                                <a href="{{ route('account.profile') }}">
+                                                    <i class="fa fa-user mr-1"></i> My Profile
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="{{ route('account.publications') }}">
+                                                    <i class="fa fa-list mr-1"></i> Our Publications
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="{{ route('account.favourites') }}">
+                                                    <i class="fa fa-star mr-1"></i> My Favourites
+                                                </a>
+                                            </li>
+
+                                        </ul>
+
+
+                                    </li>
+
+
+
+                                </div>
+
+                            @endguest
+                            <!-- Header User Button End -->
                         </ul>
                     </nav>
                 </div>
@@ -41,64 +85,7 @@
 
             </div>
 
-            @guest
-                <div class="header-user d-none d-lg-flex">
-                    <div class=" {{ $class ?? '' }}">
-                        <a href="{{ route('login') }}" class="ft-medium text-bold">
-                            <i class="lni lni-user mr-2"></i>Sign In
-                        </a>
-                    </div>
 
-                    <!-- <li class=" {{ $class ?? '' }}">
-                <a href="{{ route('register') }}" class="ft-medium text-bold">
-                 Register
-                </a>
-               </li> -->
-                @else
-                    <nav class="menu-primary">
-                        <ul class="menu-primary__container">
-
-                            <li class="menu-item-has-children">
-                                <a href="#"><span>Account </span></a>
-                                <ul class="sub-menu">
-                                    @if (is_admin())
-                                        <li class="">
-                                            <a href="{{ route('admin.index') }}">
-                                                <i class="fa fa-link mr-1"></i>Admin Panel
-                                            </a>
-                                        </li>
-                                    @endif
-                                    <li class="">
-                                        <a href="{{ route('account.profile') }}">
-                                            <i class="fa fa-user mr-1"></i> My Profile
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="{{ route('account.publications') }}">
-                                            <i class="fa fa-list mr-1"></i> Our Publications
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="{{ route('account.favourites') }}">
-                                            <i class="fa fa-star mr-1"></i> My Favourites
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="{{ url('logout') }}" class="ft-medium">
-                                            Logout
-                                        </a>
-                                    </li>
-                                </ul>
-
-
-                            </li>
-
-                        </ul>
-                    </nav>
-                </div>
-
-            @endguest
-            <!-- Header User Button End -->
 
             <!-- Header Mobile Toggle Start -->
             <div class="header-toggle">
@@ -116,6 +103,7 @@
 
     </div>
     <!-- Header Main Wrapper End -->
+</div>
 </div>
 </div>
 <!-- Header Main End -->

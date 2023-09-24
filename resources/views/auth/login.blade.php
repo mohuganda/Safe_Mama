@@ -14,7 +14,7 @@
 
                                <h3 class="py-3">Login to access more</h3>
 								<div class="form-group">
-									<label>User Name *</label>
+									<label>Email *</label>
 									<input type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Username*" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
