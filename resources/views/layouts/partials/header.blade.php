@@ -33,15 +33,14 @@
                             </li>
 
                             <li><a href="{{ url('incidents') }}"><span>MCH Incident Reporting</span></a></li>
-                            <div class="header-user d-none d-lg-flex">
                             @guest
 
-                                        <li><a href="{{ url('login') }}"><span>Sign In</span></a></li>
+                            <li><a href="{{ url('login') }}"><span>Sign In</span></a></li>
 
 
                                 @else
-                                    <li class="menu-item-has-children">
-                                        <a href="#"><span>Account </span></a>
+                            <li class="menu-item-has-children">
+                                    <a href="#"><span>Account </span></a>
                                         <ul class="sub-menu">
                                             @if (is_admin())
                                                 <li class="">
@@ -69,11 +68,8 @@
                                         </ul>
 
 
-                                    </li>
+                            </li>
 
-
-
-                                </div>
 
                             @endguest
                             <!-- Header User Button End -->

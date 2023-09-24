@@ -11,12 +11,13 @@
 					<div class="col-sm-4">
 						<!-- Footer Widget Start -->
 						<div class="footer-widget">
-							<h4 class="footer-widget__title">About</h4>
+							<h4 class="footer-widget__title">Links</h4>
 
 							<ul class="footer-widget__link">
-								<li><a href="">About Us</a></li>
-								<li><a href="">Events</a></li>
-								<li><a href="#">Forum</a></li>
+							<li><a class="active" href="{{ url('/') }}"><span>Home</span></a>
+                            <li><a href="{{ url('records') }}">Resources</a></li>
+                            <li><a href="{{ url('forums') }}">Forums</a></li>
+                            <li><a href="{{ url('webinars') }}">Webinars</a></li>
 							</ul>
 						</div>
 						<!-- Footer Widget End -->
@@ -24,12 +25,13 @@
 					<div class="col-sm-4">
 						<!-- Footer Widget Start -->
 						<div class="footer-widget">
-							<h4 class="footer-widget__title">Links</h4>
+							<h4 class="footer-widget__title">Training</h4>
 
 							<ul class="footer-widget__link">
-								<li><a href="">Resources</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="">Register</a></li>
+								 <li><a href="https://elearning.health.go.ug/course/index.php?categoryid=3"
+                                            target="_blank"><span>Training Courses</span></a></li>
+                                    <li><a href="https://hris2.health.go.ug/national_train/login"
+                                  target="_blank"><span>IHRIS In-service Training</span></a></li>
 							</ul>
 						</div>
 						<!-- Footer Widget End -->
@@ -40,9 +42,8 @@
 							<h4 class="footer-widget__title">Support</h4>
 
 							<ul class="footer-widget__link">
-							     <li><a href="#">Partners</a></li>
-								<li><a href="#">Documentation</a></li>
-								<li><a href="f">FAQs</a></li>
+							     <li><a href="{{url('privacy')}}">Privacy Policy</a></li>
+								<li><a href="{{url('faqs')}}">FAQs</a></li>
 							</ul>
 						</div>
 						<!-- Footer Widget End -->
@@ -53,23 +54,20 @@
 			<div class="col-lg-4">
 				<!-- Footer Widget Start -->
 				<div class="footer-widget text-center">
-                    <div class="col-sm-2">
+
 					  <a href="#" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/world_bank.png')}}" alt="Logo" width="80"></a>
-                    </div>
-                    <div class="col-sm-2">
-					  <a href="#" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/moh_logo.png')}}" alt="Logo" width="70"></a>
-                    </div>
+
+					  <a href="#" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/moh_logo.png')}}" alt="Logo" width="30"></a>
+
 					<div class="footer-widget__social">
-						<a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-						<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-						<a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-						<a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="{{asset('assets/mama/app/safe_mama.apk)}}" target="_blank"><i class="fab fa-playstore"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-appstore"></i></a>
+						<a href="https://twitter.com/safe_mama" target="_blank"><i class="fab fa-twitter"></i></a>
+						<a href="https://www.facebook.com/safe_mama" target="_blank"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://www.linkedin.com/safe_mama" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+						<a href="https://www.youtube.com/safe_mama" target="_blank"><i class="fab fa-youtube"></i></a>
 					</div>
 
-					<ul class="footer-widget__link flex-row gap-8 justify-content-center">
-						<li><a href="#">Terms of Use</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-					</ul>
 				</div>
 				<!-- Footer Widget End -->
 			</div>
@@ -92,24 +90,6 @@
 </main>
 
 </div>
-</div>
-
-
-<!--  Demo Option Start -->
-<div class="edumall-demo-option">
-
-
-<div class="edumall-demo-option__panel">
-
-<div class="edumall-demo-option__header">
-	<h5 class="edumall-demo-option__title">Safe Mama - Top health information services</h5>
-	<a class="edumall-demo-option__btn btn btn-primary btn-hover-secondary" href=""><i class="fas fa-shopping-basket"></i> Buy Now</a>
-</div>
-
-
-
-</div>
-
 </div>
 
 <!-- JS Vendor, Plugins & Activation Script Files -->
