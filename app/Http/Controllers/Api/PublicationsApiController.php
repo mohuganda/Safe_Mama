@@ -60,6 +60,41 @@ class PublicationsApiController extends Controller
     }
 
 
+      /**
+        * @OA\Get(
+        * path="/knowhub/api/publications/recommended",
+        * operationId="List Recommended Publications",
+        * tags={"List Publications"},
+        * summary="List Publications",
+        * description="Returns a list of Recommended publications",
+        *  @OA\Parameter(
+        *      name="term",
+        *      in="query",
+        *      required=false,
+        *      description="Recommended records",
+        *      @OA\Schema(
+        *           type="string"
+        *      )
+        *   ),
+        *      @OA\Response(
+        *          response=200,
+        *          description="Successful",
+        *          @OA\JsonContent()
+        *       )
+        * )
+    */
+
+     public function recommendations(Request $request)
+    {
+        $request['is_featured'] = 1;
+        $publications =  $this->publicationsRepo->get($request,true);
+
+        return [
+            "status"  => 200,
+            "data"    => $publications
+        ];
+    }
+
 
     /**
         * @OA\Get(
