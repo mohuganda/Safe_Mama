@@ -275,7 +275,7 @@ class PublicationsRepository extends SharedRepo{
             'comments','parent',
             'summaries','versioning'])->find($id);
 
-        $viewed = get_cookie("Viewed".$pub->id,'yes');
+        $viewed = get_cookie("Viewed".@$pub->id,'yes');
 
         if(!$viewed):
             $pub->visits = $pub->visits + 1;
