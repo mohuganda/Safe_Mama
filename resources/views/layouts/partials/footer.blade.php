@@ -55,12 +55,12 @@
 				<!-- Footer Widget Start -->
 				<div class="footer-widget text-center">
 
-					  <a href="#" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/world_bank.png')}}" alt="Logo" width="80"></a>
+					  <a href="https://www.worldbank.org/en/country/uganda" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/world_bank.png')}}" alt="Logo" width="80"></a>
 
-					  <a href="#" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/moh_logo.png')}}" alt="Logo" width="30"></a>
+					  <a href="https://health.go.ug" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/moh_logo.png')}}" alt="Logo" width="30"></a>
 
 					<div class="footer-widget__social">
-                        <a href="{{asset('assets/mama/app/safe_mama.apk)}}" target="_blank"><i class="fab fa-playstore"></i></a>
+                        <a href="{{asset('assets/mama/app/safe_mama.apk')}}" target="_blank"><i class="fab fa-playstore"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-appstore"></i></a>
 						<a href="https://twitter.com/safe_mama" target="_blank"><i class="fab fa-twitter"></i></a>
 						<a href="https://www.facebook.com/safe_mama" target="_blank"><i class="fab fa-facebook-f"></i></a>
