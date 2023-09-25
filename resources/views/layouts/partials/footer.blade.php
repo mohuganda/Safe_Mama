@@ -33,13 +33,7 @@
                                     <li><a href="https://hris2.health.go.ug/national_train/login"
                                   target="_blank"><span>IHRIS In-service Training</span></a></li>
 							</ul>
-						</div>
-						<!-- Footer Widget End -->
-					</div>
-					<div class="col-sm-4">
-						<!-- Footer Widget Start -->
-						<div class="footer-widget">
-							<h4 class="footer-widget__title">Support</h4>
+                            <h4 class="footer-widget__title">Support</h4>
 
 							<ul class="footer-widget__link">
 							     <li><a href="{{url('privacy')}}">Privacy Policy</a></li>
