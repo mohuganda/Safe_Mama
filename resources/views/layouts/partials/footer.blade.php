@@ -4,9 +4,9 @@
 <!-- Footer Widget Area Start -->
 <div class="footer-widget-area section-padding-01">
 	<div class="container">
-		<div class="row gy-6">
+		<div class="row">
 			<div class="col-lg-6">
-				<div class="row gy-6">
+				<div class="row">
 
 					<div class="col-lg-4">
 						<!-- Footer Widget Start -->
