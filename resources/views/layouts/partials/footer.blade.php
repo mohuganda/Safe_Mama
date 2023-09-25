@@ -11,7 +11,7 @@
 					<div class="col-lg-4">
 						<!-- Footer Widget Start -->
 						<div class="footer-widget">
-							<h4 class="footer-widget__title">Links</h4>
+							<h4 class="footer-widget__title">Quick Links</h4>
 
 							<ul class="footer-widget__link">
 							<li><a class="active" href="{{ url('/') }}"><span>Home</span></a>
@@ -51,7 +51,7 @@
 
 				</div>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-6">
 				<!-- Footer Widget Start -->
 				<div class="footer-widget text-center">
                  <p>Developed by the GoU under the Uganda Reproductive Maternal and Child Health Services Improvement Project funded by World Bank, Global Financing Facility and the Government of Sweden</p>
