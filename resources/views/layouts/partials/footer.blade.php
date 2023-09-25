@@ -5,7 +5,7 @@
 <div class="footer-widget-area section-padding-01">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="col-lg-4">
 				<div class="row">
 
 					<div class="col-lg-4">
@@ -25,27 +25,25 @@
 					<div class="col-lg-4 col-sm-6">
 						<!-- Footer Widget Start -->
 						<div class="footer-widget">
-							<h4 class="footer-widget__title">Training</h4>
+							<h4 class="footer-widget__title">Training Links</h4>
 
 							<ul class="footer-widget__link">
 								 <li><a href="https://elearning.health.go.ug/course/index.php?categoryid=3"
                                             target="_blank"><span>Training Courses</span></a></li>
                                     <li><a href="https://hris2.health.go.ug/national_train/login"
                                   target="_blank"><span>IHRIS In-service Training</span></a></li>
-							</ul>
-                            <h4 class="footer-widget__title">Support</h4>
 
-							<ul class="footer-widget__link">
-							     <li><a href="{{url('privacy')}}">Privacy Policy</a></li>
-								<li><a href="{{url('faqs')}}">FAQs</a></li>
+                                    <li><a href="{{url('privacy')}}">Privacy Policy</a></li>
+								    <li><a href="{{url('faqs')}}">FAQs</a></li>
 							</ul>
+
 						</div>
 						<!-- Footer Widget End -->
 					</div>
 
 				</div>
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-8">
 				<!-- Footer Widget Start -->
 				<div class="footer-widget text-center">
                  <p>Developed by the GoU under the Uganda Reproductive Maternal and Child Health Services Improvement Project funded by World Bank, Global Financing Facility and the Government of Sweden</p>
