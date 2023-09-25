@@ -54,10 +54,11 @@
 			<div class="col-lg-4">
 				<!-- Footer Widget Start -->
 				<div class="footer-widget text-center">
-                 <p>Developed by the GoU under the Uganda Reproductive Maternal and Child Health Services Improvement Project funded by World Bank and the Government of Sweden</p>
-					  <a href="https://www.worldbank.org/en/country/uganda" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/world_bank.png')}}" alt="Logo" width="80"></a>
+                 <p>Developed by the GoU under the Uganda Reproductive Maternal and Child Health Services Improvement Project funded by World Bank, Global Financing Facility and the Government of Sweden</p>
 
-					  <a href="https://health.go.ug" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/moh_logo.png')}}" alt="Logo" width="30"></a>
+				<a href="https://health.go.ug" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/moh_logo.png')}}" alt="Logo" width="30"></a>
+                 <a href="https://www.worldbank.org/en/country/uganda" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/world_bank.png')}}" alt="Logo" width="80"></a>
+                <a href="https://www.worldbank.org/en/country/uganda" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/gff.png')}}" alt="Logo" width="80"></a>
 
 					<div class="footer-widget__social">
                         <a href="{{asset('assets/mama/app/safe_mama.apk')}}" class="footer-widget__logo"><img src="{{ asset('assets/mama/images/btn-google-play.jpg')}}" alt="Play Store"></a>
