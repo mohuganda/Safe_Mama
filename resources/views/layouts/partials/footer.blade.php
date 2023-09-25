@@ -5,24 +5,10 @@
 <div class="footer-widget-area section-padding-01">
 	<div class="container">
 		<div class="row gy-6">
-			<div class="col-lg-8">
+			<div class="col-lg-6">
 				<div class="row gy-6">
 
-					<div class="col-sm-4">
-						<!-- Footer Widget Start -->
-						<div class="footer-widget">
-							<h4 class="footer-widget__title">Links</h4>
-
-							<ul class="footer-widget__link">
-							<li><a class="active" href="{{ url('/') }}"><span>Home</span></a>
-                            <li><a href="{{ url('records') }}">Resources</a></li>
-                            <li><a href="{{ url('forums') }}">Forums</a></li>
-                            <li><a href="{{ url('webinars') }}">Webinars</a></li>
-							</ul>
-						</div>
-						<!-- Footer Widget End -->
-					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-3">
 						<!-- Footer Widget Start -->
 						<div class="footer-widget">
 							<h4 class="footer-widget__title">Training</h4>
@@ -36,7 +22,7 @@
 						</div>
 						<!-- Footer Widget End -->
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-3">
 						<!-- Footer Widget Start -->
 						<div class="footer-widget">
 							<h4 class="footer-widget__title">Support</h4>
@@ -51,7 +37,7 @@
 
 				</div>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-6">
 				<!-- Footer Widget Start -->
 				<div class="footer-widget text-center">
                  <p>Developed by the GoU under the Uganda Reproductive Maternal and Child Health Services Improvement Project funded by World Bank, Global Financing Facility and the Government of Sweden</p>
